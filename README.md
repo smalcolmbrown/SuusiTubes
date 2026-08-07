@@ -1,4 +1,5 @@
-SuusiTubes_V1 
+SuusiTubes
+
 A better Thermionic Valve Model for LTspice simulations 
 
 Building the wonderful work of Scott Reynalds, W. Marshall Leach Jr, Charles Rydel, Norman Koren, Stefano Perugini, Mike Holmes, and sage advice from Derk Reefman.
