@@ -1,0 +1,2941 @@
+*************************************************************************
+* SuusiTubes.net
+* Building the work of Norman Koren, Charles Rydel, Stefano Perugini,
+* Mike Holmes, Marshall Leach and advice from Dirk Reefman
+* Hybridisation by Suusi Malcolm-Brown July / September 2025
+* rc 1 2025/08/12
+*************************************************************************
+
+********************
+* Rectifier Diodes *
+********************
+
+******************
+.SUBCKT 5AR4  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement) AKA GZ34
+* Stefano Peruginis Data  15-May-2020
+x1 1 2 3 GZ34
+.ENDS    5AR4
+
+******************
+.SUBCKT 5R4GY  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* GE Data Sheet  15-May-2020
+X1 1 2 3 DULERECP2 Ka=1.497408m Kb=0.000252 EPS=5.936332 EX=0.620670
+.ENDS    5R4GY
+
+******************
+.SUBCKT 5U4GB  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* TUNG-SOL  15-May-2020
+X1 1 2 3 DULERECP2 Ka=-0.525182m Kb=0.000689 EPS=1.597782 EX=0.424088
+.ENDS    5U4GB
+
+******************
+.SUBCKT 5V3  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* GE Data Sheet  16-May-2020
+X1 1 2 3 DULERECP2 Ka=3.372361m Kb=0.000354 EPS=1.509757 EX=0.728075
+.ENDS    5V3
+
+******************
+.SUBCKT 5V3A  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* GE Data Sheet  16-May-2020
+x1 1 2 3 5V3
+.ENDS    5V3A
+
+******************
+.SUBCKT 5V4 1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* TUNG-SOL Data Sheet  16-May-2020
+x1 1 2 3 5V4G
+.ENDS	5V4
+
+******************
+.SUBCKT 5V4G  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* TUNG-SOL Data Sheet  16-May-2020
+X1 1 2 DULERECP2 Ka=3.218180m Kb=0.001999 EPS=-0.643428 EX=0.409882
+.ENDS    5V4G
+
+******************
+.SUBCKT 5V4GA  1 2 3 ; A1 A2 C (Diode Child-Langmuirs Law) AKA GZ31
+* GE Data Sheet  12-May-2008
+x1 1 2 3 GZ31
+.ENDS    5V4GA
+
+******************
+.SUBCKT 5V4GB  1 2 3 ; A1 A2 C (Diode Child-Langmuirs Law) AKA GZ32
+* La Radotechnique  12-May-2008
+x1 1 2 3 GZ32
+.ENDS    5V4GB
+
+******************
+.SUBCKT 5Y3GT  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* GE Data Sheet  15-May-2020
+X1 1 2 3 DULERECP2 Ka=0.165350m Kb=0.000308 EPS=1.013932 EX=0.527978
+.ENDS    5Y3GT
+
+******************
+.SUBCKT 6CA4 1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement) AKA EZ81
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 EZ81
+.ENDS    6CA4
+
+******************
+.SUBCKT 6H6  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* GE  16-May-2020
+X1 1 2 3 DULERECP2 Ka=0.091302m Kb=0.000818 EPS=1.063437 EX=0.208383
+.ENDS    6H6
+
+******************
+.SUBCKT 6H6S  1 2 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* GE  18-Apr-2018
+x1 1 2 3 6H6
+.ENDS    6H6S
+
+******************
+.SUBCKT 6V4  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement) AKA EZ80
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 EZ80
+.ENDS    6V4
+
+******************
+.SUBCKT 6X4  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 12X4
+*1 1 2 3 DULERECP2 Ka=1.237968m Kb=0.000217 EPS=2.409757 EX=0.770432
+.ENDS    6X4
+
+******************
+.SUBCKT 6X5  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 12X5
+*1 1 2 3 DULERECP2 Ka=1.237968m Kb=0.000217 EPS=2.409757 EX=0.770432
+.ENDS    6X4
+
+******************
+.SUBCKT 12X4  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=1.237968m Kb=0.000217 EPS=2.409757 EX=0.770432
+.ENDS    12X4
+
+******************
+.SUBCKT 12X5  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=1.237968m Kb=0.000217 EPS=2.409757 EX=0.770432
+.ENDS    12X5
+
+******************
+.SUBCKT AZ12  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1942)  16-May-2020
+X1 1 2 3 DULERECP2 Ka=-0.392356m Kb=0.000767 EPS=-0.511919 EX=0.433204
+.ENDS    AZ12
+
+******************
+.SUBCKT CV1071 1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1942)  17-Sep-2025
+x1 1 2 3 5U4GB
+.ENDS    CV1071	;
+
+******************
+.SUBCKT CV1120  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  17-Sep-2025
+X1 1 2 RECP2 Ka=0.050728m Kb=0.000021 EPS=3.046759 EX=0.488596
+.ENDS    CV1120
+
+******************
+.SUBCKT EZ1  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Same as EZ11  05-Oct-2025
+x1 1 2 3 EZ11
+.ENDS    EZ1
+
+******************
+.SUBCKT EZ11  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1942)  16-May-2020
+X1 1 2 3 DULERECP2 Ka=0.038431m Kb=0.001036 EPS=0.037078 EX=0.399234
+.ENDS    EZ11
+
+******************
+.SUBCKT EZ12  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1942)  16-May-2020
+X1 1 2 3 DULERECP2 Ka=-0.115612m Kb=0.001249 EPS=-0.092573 EX=0.427527
+.ENDS    EZ12
+
+******************
+.SUBCKT EZ40  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Philips data book  16-May-2020
+X1 1 2 3 DULERECP2 Ka=0.452848m Kb=0.000351 EPS=1.593467 EX=0.592506
+.ENDS    EZ40
+
+******************
+.SUBCKT EZ41  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Same as EZ11  16-May-2020
+x1 1 2 3 EZ11
+.ENDS    EZ41
+
+******************
+.SUBCKT EZ80  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Philips data book  15-May-2020
+X1 1 2 3 DULERECP2 Ka=0.419831m Kb=0.000355 EPS=2.280909 EX=0.689377
+.ENDS    EZ80
+
+******************
+.SUBCKT EZ81  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Philips Data Sheet  15-May-2020
+X1 1 2 3 DULERECP2 Ka=3.756336m Kb=0.000348 EPS=1.352084 EX=0.866160
+.ENDS    EZ81
+
+******************
+.SUBCKT EZ90  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=0.718990m Kb=0.000145 EPS=4.951288 EX=0.872971
+.ENDS    EZ90
+
+******************
+.SUBCKT EZ91  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 EZ80
+.ENDS    EZ91
+
+******************
+.SUBCKT GZ30  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Mullard Data Book  15-May-2020
+X1 1 2 3 DULERECP2 Ka=3.479224m Kb=0.001100 EPS=0.470589 EX=0.567022
+.ENDS    GZ30
+
+******************
+.SUBCKT GZ31  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=0.330310m Kb=0.001369 EPS=0.241358 EX=0.508951
+.ENDS    GZ31
+
+******************
+.SUBCKT GZ32  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* La Radotechnique  15-May-2020
+X1 1 2 3 DULERECP2 Ka=2.634169m Kb=0.000059 EPS=1.099857 EX=1.192967
+.ENDS    GZ32
+
+******************
+.SUBCKT GZ33  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=6.798302m Kb=0.000384 EPS=0.305033 EX=1.013003
+.ENDS    GZ33
+
+******************
+.SUBCKT GZ34  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Stefano Peruginis Data  15-May-2020
+X1 1 2 3 DULERECP2 Ka=6.5731838m Kb=0.0003454340 EPS=0.1 EX=1.0847522
+.ENDS    GZ34
+
+******************
+.SUBCKT GZ37  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=4.086873m Kb=0.000349 EPS=1.696166 EX=0.642160
+.ENDS    GZ37
+
+******************
+.SUBCKT GZ40  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=0.354371m Kb=0.000385 EPS=1.485990 EX=0.564772
+.ENDS    GZ40
+
+******************
+.SUBCKT GZ41  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+X1 1 2 3 DULERECP2 Ka=0.533769m Kb=0.000565 EPS=1.992332 EX=0.538389
+.ENDS    GZ41
+
+******************
+.SUBCKT RG2_4D10  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1942)  25-May-2020
+X1 1 2 3 DULERECP2 Ka=0.125197m Kb=0.000059 EPS=2.714920 EX=0.978640
+.ENDS    RG2_4D10
+
+******************
+.SUBCKT RG12D60  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1940)  25-May-2020
+X1 1 2 3 DULERECP2 Ka=-1.236602m Kb=0.001322 EPS=-0.005287 EX=0.214695
+.ENDS    RG12D60
+
+******************
+.SUBCKT RG12D300  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1943)  25-May-2020
+X1 1 2 3 DULERECP2 Ka=4.096757m Kb=0.000358 EPS=1.671073 EX=0.700284
+.ENDS    RG12D300
+
+***********************
+* Small Signal Diodes *
+***********************
+
+******************
+.SUBCKT 6AL5  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* GE Data Sheet  29-May-2020
+X1 1 2 RECP2 Ka=4.147079m Kb=0.000702 EPS=-0.648792 EX=0.757482
+.ENDS    6AL5
+
+******************
+.SUBCKT 6H2P  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 6AL5
+.ENDS    6N2P
+
+******************
+.SUBCKT 6X2P  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 3 6AL5
+.ENDS    6X2P
+
+******************
+.SUBCKT CV1052  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Philips 1970  17-Sep-2025
+x1 1 2 3 EAA91
+.ENDS    CV1052
+
+******************
+.SUBCKT CV1092  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Philips 1970  17-Sep-2025
+x1 1 2 3 EAA91
+.ENDS    CV1092
+
+******************
+.SUBCKT EAA11  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Philips 1970  25-May-2020
+x1 1 2 3 EAA91
+.ENDS    EAA11
+
+******************
+.SUBCKT EAA91  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Philips 1970  25-May-2020
+X1 1 2 RECP2 Ka=0.403541m Kb=0.002172 EPS=0.185831 EX=0.458181
+.ENDS    EAA91
+
+******************
+.SUBCKT EAA901  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  06-May-2012
+x1 1 2 EAA91
+.ENDS    EAA901
+
+******************
+.SUBCKT EB11  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  17-Sept-2025
+x1 1 2 EAA91
+.ENDS    EB11
+
+******************
+.SUBCKT EB34  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2025
+x1 1 2 EAA91
+.ENDS    EB34
+
+******************
+.SUBCKT EB41  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 EAA91
+.ENDS    EB41
+
+******************
+.SUBCKT EB91  1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 EAA91
+.ENDS    EB91
+
+******************
+.SUBCKT RG2_4D1  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1943)  26-May-2020
+X1 1 2 3 DULERECP2 Ka=-0.005685m Kb=0.000014 EPS=11.778083 EX=1.127092
+.ENDS    RG2_4D1
+
+******************
+.SUBCKT RG12D2  1 2 3 ; A1 A2 C (Diode Stefano Peruginis second improvement)
+* Telefunken (1941)  25-May-2020
+X1 1 2 3 DULERECP2 Ka=0.088608m Kb=0.000368 EPS=0.240854 EX=0.417007
+.ENDS    RG12D2
+
+******************
+.SUBCKT RG12D3  1 2  ; A C  (Diode Stefano Peruginis second improvement)
+* Telefunken (1944)  25-May-2020
+X1 1 2 RECP2 Ka=0.136546m Kb=0.000168 EPS=2.212480 EX=0.923199
+.ENDS    RG12D3
+
+******************************
+* Triodes Diode combinations *
+******************************
+
+******************
+.SUBCKT EAC91D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EAC91D
+
+******************
+.SUBCKT EAC91T  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969
+* library format: LTSpice 07-May-2012
+X1 1 2 3 TRIODE MU=40.15 EX=1.262 KG1=889.6 KP=123.41 KVB=300.0 VCT=0.00 RGI=2000 CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EAC91T
+
+******************
+.SUBCKT EBC1D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EBC1D
+
+******************
+.SUBCKT EBC1T  1 2 3 ; P G C (Triode)
+* Philips data sheet
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 TRIODE MU=29.14 EX=1.170 KG1=966.7 KP=214.63 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.7p ;
+.ENDS    EBC1T
+
+******************
+.SUBCKT EBC3D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EBC3D
+
+******************
+.SUBCKT EBC3T  1 2 3 ; P G C (Triode)
+* universal vademecum (1960)
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 TRIODE MU=31.17 EX=1.196 KG1=1235.2 KP=280.14 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC3T
+
+******************
+.SUBCKT EBC11D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EBC11D
+
+******************
+.SUBCKT EBC11T 1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 03-May-2018
+X1 1 2 3 TRIODE MU=35.09 EX=1.055 KG1=532.1 KP=115.68 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC11T
+
+******************
+.SUBCKT EBC33D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EBC33D
+
+******************
+.SUBCKT EBC33T  1 2 3 ; P G C (Triode)
+* universal vademecum (1960)
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 TRIODE MU=31.17 EX=1.196 KG1=1235.2 KP=280.14 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC33T
+
+******************
+.SUBCKT EBC41D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EAC41D
+
+******************
+.SUBCKT EBC41T 1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 03-May-2018
+X1 1 2 3 TRIODE MU=35.09 EX=1.055 KG1=532.1 KP=115.68 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC41T
+
+******************
+.SUBCKT EBC81D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+x1 1 2 EAA91
+.ENDS    EAC81D
+
+******************
+.SUBCKT EBC81T 1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 03-May-2018
+X1 1 2 3 TRIODE MU=35.09 EX=1.055 KG1=532.1 KP=115.68 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC81T
+
+******************
+.SUBCKT EBC90D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+X1 1 2 EAA91
+.ENDS    EAC90D
+
+******************
+.SUBCKT EBC90T 1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 03-May-2018
+X1 1 2 3 TRIODE MU=35.09 EX=1.055 KG1=532.1 KP=115.68 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC90T
+
+******************
+.SUBCKT EBC91D  A C  ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+X1 1 2 EAA91
+.ENDS    EAC91D
+
+******************
+.SUBCKT EBC91T 1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 03-May-2018
+X1 1 2 3 TRIODE MU=35.09 EX=1.055 KG1=532.1 KP=115.68 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EBC91T
+
+******************************
+* Diode Pentode Combinations *
+******************************
+
+******************
+.SUBCKT EBF2D 1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+X1 1 2 EAA91
+.ENDS    EBF2D
+
+******************
+.SUBCKT EBF2P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=30.17 EX=1.350 KG1=2126.3 KG2=1232 KP=32.42 KVB=25.7 VCT=0.00 ALPHA=.01m BETA=.1U CCG=4.2p CPG1=0.002p CCP=8.8p ;
+.ENDS    EBF2P
+
+******************
+.SUBCKT EBF11D 1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+X1 1 2 EAA91
+.ENDS    EBF11D
+
+******************
+.SUBCKT EBF11P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=25.28 EX=1.350 KG1=2345.2 KG2=1257 KP=33.77 KVB=40.1 VCT=0.00 ALPHA=.01m BETA=.1U CCG=5.2p CPG1=0.002p CCP=6.2p ;
+.ENDS    EBF11P
+
+******************
+.SUBCKT EBF15D 1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+X1 1 2 EAA91
+.ENDS    EBF15D
+
+******************
+.SUBCKT EBF15P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=15.25 EX=1.350 KG1=1429.3 KG2=707 KP=177.65 KVB=18.8 VCT=0.00 ALPHA=.01m BETA=.1U CCG=8.0p CPG1=0.004p CCP=5.8p ;
+.ENDS    EBF15P
+
+******************
+.SUBCKT EBF80D 1 2 ; A C (Diode Stefano Peruginis second improvement)
+* Mullard Data sheet  06-May-2012
+X1 1 2 EAA91
+.ENDS    EBF80D
+
+******************
+.SUBCKT EBF80P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=18.36 EX=1.350 KG1=2255.8 KG2=1253.5 KP=42.85 KVB=5.7 VCT=0.00 ALPHA=.01m BETA=.1U CCG=4.2p CPG1=0.003p CCP=4.9p ;
+.ENDS    EBF80P
+
+***********
+* Triodes *
+***********
+
+******************
+.SUBCKT 30  1 2 3 ; P G C (Triode)
+* TUNG-SOL Data sheet
+* library format: LTSpice 20-Apr-2014
+X1 1 2 3 TRIODE MU=9.08 EX=1.779 KG1=16126.7 KP=192.81 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=17.0p CGP=8.2p CCP=6.0p ;
+.ENDS    30
+
+******************
+.SUBCKT 31  1 2 3 ; P G C (Triode)
+* RCA Data sheet
+* library format: LTSpice 20-Apr-2014
+X1 1 2 3 TRIODE MU=3.76 EX=1.511 KG1=12765.0 KP=49.02 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=3.5p CGP=5.7p CCP=2.7p ;
+.ENDS    31
+
+******************
+.SUBCKT 76  1 2 3 ; P G C (Triode)
+* TUNG SOL + RCA data sheet
+* library format: LTSpice 18-Nov-2009
+X1 1 2 3 TRIODE MU=14.04 EX=1.269 KG1=2501.1 KP=202.50 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    76
+
+******************
+.SUBCKT 6N7  1 2 3 ; P G C (Triode)
+* GE 6N7
+* library format: LTSpice 30-Mar-2014
+X1 1 2 3 TRIODE MU=35.96 EX=1.248 KG1=1611.4 KP=235.00 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    6N7
+
+******************
+.SUBCKT 6R4 2 3 ; P G C (Triode)
+* Mullard data book 1968 AKA EC81
+* library format: LTSpice 18-Sep-2011
+* Call Equiverlent
+X1 1 2 3 4 EC81 ; same as EC 81
+.ENDS    6R4
+
+******************
+.SUBCKT 300B  1 2 3 ; P G C (Triode)
+* JJ Data sheet
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=3.92 EX=1.504 KG1=2140.3 KP=64.28 KVB=300.0 VCT=0.00 ALPHA=.4m BETA=5U CCG=17.0p CGP=11.0p CCP=7.5p ;
+.ENDS    300B
+
+******************
+.SUBCKT 5670  1 2 3 ; P G C (Triode)
+* RCA Data Sheet
+* library format: LTSpice 02-May-2012
+X1 1 2 3 TRIODE MU=32.76 EX=1.619 KG1=1359.4 KP=211.19 KVB=47.0 VCT=0.40 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    5670
+
+******************
+.SUBCKT 5751  1 2 3 ; P G C (Triode)
+* GE Data Sheet
+* library format: LTSpice 18-Nov-2009
+X1 1 2 3 TRIODE MU=84.75 EX=1.291 KG1=1137.3 KP=415.40 KVB=1515.2 VCT=0.40 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    5751
+
+******************
+.SUBCKT 5965  1 2 3 ; P G C (Triode)
+* Tung Sol Data Sheet AKA 12AV7
+* library format: LTSpice 08-Apr-2012
+X1 1 2 3 4 12AV7 ; same as 12AV7
+.ENDS    5965
+
+******************
+.SUBCKT 6072  1 2 3 ; P G C (Triode)
+* Tung Sol Data Sheet AKA 12AY7
+* library format: LTSpice 08-Apr-2012
+X1 1 2 3 4 12AY7 ; same as 12AY7
+.ENDS    6072
+
+******************
+.SUBCKT 6386  1 2 3 ; P G C (Triode) This is not a good model The error is 2 orders of magnitude grater than the 12ax7a. Use at your own risk.
+* GE Data sheet
+* library format: LTSpice 11-Jan-2015
+X1 1 2 3 TRIODE MU=37.78 EX=1.444 KG1=1026.6 KP=26.10 KVB=424.0 VCT=0.50 ALPHA=.01m BETA=.1U CCG=2.6p CGP=2.0p CCP=1.6p ;
+.ENDS    6386
+
+******************
+.SUBCKT 6922 1 2 3 ; A G C (Triode)	AKA E88CC
+* Mullard
+X1 1 2 3 TRIODE MU=31.75 EX=1.177 KG1=233.1 KP=288.17 KVB=83.4 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3P CGP=2.4P CCP=.9P	; ADD .7PF TO ADJACENT PINS; .5 TO OTHERS.
+.ENDS	6922
+
+******************
+.SUBCKT 7025  1 2 3 ; P G C (Triode)
+* Sylvania Technical Manual
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 TRIODE MU=102.50 EX=1.409 KG1=1598.8 KP=813.82 KVB=44.9 VCT=0.50 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    7025
+
+******************
+.SUBCKT 2A3  1 2 3 ; P G C (Triode)
+* JJ Data sheet
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=4.30 EX=1.868 KG1=7214.4 KP=23.90 KVB=300.0 VCT=0.00 ALPHA=.2m BETA=3U CCG=17.0p CGP=11.0p CCP=7.5p ;
+.ENDS    2A3
+
+******************
+.SUBCKT 6C33C  1 2 3 ; P G C (Triode)
+* Soviet (1970) Using both cathodes ie both heaters working
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 TRIODE MU=3.27 EX=1.397 KG1=150.9 KP=13.94 KVB=300.0 VCT=0.00 ALPHA=1m BETA=5U CCG=30.0p CGP=31.0p CCP=10.5p ;
+.ENDS    6C33C
+
+******************
+.SUBCKT 6BC8  1 2 3 ; P G C (Triode)
+* Sylvania
+* library format: LTSpice 07-Apr-2019
+X1 1 2 3 TRIODE MU=84.20 EX=1.696 KG1=378.9 KP=75.61 KVB=2026.2 VCT=0.50 ALPHA=1m BETA=5U CCG=2.5p CGP=1.4p CCP=1.3p ;
+.ENDS    6BC8
+
+******************
+.SUBCKT 6CG7  1 2 3 ; P G C (Triode)
+* GE Data Sheet 1963
+* library format: LTSpice 07-Apr-2019
+X1 1 2 3 TRIODE MU=21.41 EX=1.322 KG1=1303.5 KP=152.43 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.9p CGP=4.7p CCP=2.7p ;
+.ENDS    6CG7
+
+******************
+.SUBCKT 6DJ8 1 2 3 ; A G C	(Triode) ;
+* Tom Mitchell
+X1 1 2 3 TRIODE MU=30.51 EX=1.532 KG1=453.9 KP=233.17 KVB=190.9 VCT=0.50  ALPHA=.04m BETA=.1U CCG=2.3P  CGP=2.1P CCP=.7P  ; ADD .7PF TO ADJACENT PINS; .5 TO OTHERS.
+.ENDS	6DJ8
+
+******************
+.SUBCKT 6EU7 2 3 ; P G C (Triode)
+* RCA Data Sheet AKA 12AX7
+* library format: LTSpice 08-Apr-2012
+X1 1 2 3 4 12AX7 ; same as 12AX7
+.ENDS    6U7
+
+******************
+.SUBCKT 6N1P  1 2 3 ; P G C (Triode)
+* Svetlana's Data sheet
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=36.65 EX=1.537 KG1=1020.2 KP=193.29 KVB=300.0 VCT=-0.50 ALPHA=.04m BETA=.1U CCG=3.7p CGP=2.3p CCP=2.2p ;
+.ENDS    6N1P
+
+******************
+.SUBCKT 6S7B  1 2 3 ; P G C (Triode)
+* Soviet Data sheet
+* library format: LTSpice 31-Dec-2023
+X1 1 2 3 TRIODE MU=68.47 EX=1.536 KG1=925.2 KP=487.29 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    6S7B
+
+******************
+.SUBCKT 6SL7GT  1 2 3 ; P G C (Triode)
+* GE
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=75.89 EX=1.233 KG1=1735.2 KP=1725.27 KVB=7.0 VCT=0.50 ALPHA=.04m BETA=.1U CCG=2.9p CGP=4.1p CCP=1.5p ;
+.ENDS    6SL7GT
+
+******************
+.SUBCKT 6SN7  1 2 3 ; P G C (Triode)
+* Sylvania Technical Manual
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=21.07 EX=1.341 KG1=1446.2 KP=157.81 KVB=179.4 VCT=0.00 ALPHA=.05m BETA=.1U CCG=3.1p CGP=4.7p CCP=1.4p ;
+.ENDS    6SN7
+
+******************
+.SUBCKT 6SN7GTA  1 2 3 ; P G C (Triode)
+* Sylvania data sheet
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=21.54 EX=1.316 KG1=1261.1 KP=156.78 KVB=296.4 VCT=0.00 ALPHA=.05m BETA=.1U CCG=3.1p CGP=4.7p CCP=1.4p ;
+.ENDS    6SN7GTA
+
+******************
+.SUBCKT 6SN7GTB  1 2 3 ; P G C (Triode)
+* Sylvania
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=21.54 EX=1.316 KG1=1261.1 KP=156.78 KVB=296.4 VCT=0.00 ALPHA=.05m BETA=.1U CCG=3.1p CGP=4.7p CCP=1.4p ;
+.ENDS    6SN7GTB
+
+******************
+.SUBCKT 12AT7  1 2 3 ; P G C (Triode)
+* MAZDA BELVU Data Sheet AKA ECC81
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=72.80 EX=1.167 KG1=341.8 KP=233.21 KVB=267.8 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    12AT7WA
+
+******************
+.SUBCKT 12AU7  1 2 3 ; P G C (Triode)
+* Sylvania Technical Manual AKA ECC82 ECC802 5814 6067 6189
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=20.21 EX=1.230 KG1=1108.7 KP=84.96 KVB=551.3 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    12AU7
+
+******************
+.SUBCKT 12AU7A  1 2 3 ; P G C (Triode)
+* MAZDA BELVU Data sheet AKA ECC82 ECC802 5814 6067 6189
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=19.41 EX=1.226 KG1=1233.8 KP=104.87 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    12AU7A
+
+******************
+.SUBCKT 12AV7  1 2 3 ; P G C (Triode)
+* Tung Sol Data Sheet AKA 5965
+* library format: LTSpice 08-Apr-2012
+X1 1 2 3 TRIODE MU=39.40 EX=1.265 KG1=484.0 KP=142.49 KVB=363.7 VCT=0.40 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    12AV7
+
+******************
+.SUBCKT 12AX7  1 2 3 ; P G C (Triode)
+* Sylvania Technical Manual 1955 AKA ECC83 12AX7A 7025
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=105.78 EX=1.474 KG1=1618.2 KP=432.76 KVB=35.6 VCT=0.50 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    12AX7
+
+******************
+.SUBCKT 12AX7A  1 2 3 ; P G C (Triode)
+* RCA data sheet AKA ECC83 7025
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=100.26 EX=1.394 KG1=1651.8 KP=17950.75 KVB=524.4 VCT=0.50 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    12AX7A
+
+******************
+.SUBCKT 12AY7  1 2 3 ; P G C (Triode)
+* GE data book June 1955
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=44.16 EX=1.113 KG1=1192.4 KP=409.96 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.0p CGP=2.0p CCP=1.0p ;
+.ENDS    12AY7
+
+******************
+.SUBCKT 12AZ7  1 2 3 ; P G C (Triode)
+* RCA data sheet AKA 12AT7 ECC81 ECC801 6060 6201 6679
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=74.08 EX=1.371 KG1=382.0 KP=190.11 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    12AZ7
+
+******************
+.SUBCKT 12B4A  1 2 3 ; P G C (Triode)
+* GEC Data sheet
+* library format: LTSpice 25-Jun-2018
+X1 1 2 3 TRIODE MU=7.40 EX=1.238 KG1=293.0 KP=49.50 KVB=300.0 VCT=0.00 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    12B4A
+
+******************
+.SUBCKT 12BH7A  1 2 3 ; P G C (Triode)
+* GE Data sheet
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=24.59 EX=1.343 KG1=594.4 KP=73.01 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=3.9p CGP=3.2p CCP=1.1p ;
+.ENDS    12BH7A
+
+******************
+.SUBCKT CV181  1 2 3 ; P G C (Triode)
+* RCA data book 1948 AKA 6SN7
+* library format: LTSpice 21-Sep-2025
+X1 1 2 3 6SN7
+.ENDS    CV181
+
+******************
+.SUBCKT CV491  1 2 3 ; P G C (Triode)
+* Mullard data book 1948 AKA ECC82
+* library format: LTSpice 21-Sep-2025
+X1 1 2 3 ECC82
+.ENDS    CV491
+
+******************
+.SUBCKT CV492  1 2 3 ; P G C (Triode)
+* Mullard data book 1948 AKA ECC83
+* library format: LTSpice 21-Sep-2025
+X1 1 2 3 ECC83
+.ENDS    CV492
+
+******************
+.SUBCKT CV1137  1 2 3 ; P G C (Triode)
+* Mullard data book 1948 AKA EC50
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 EC52
+.ENDS    CV1137
+
+******************
+.SUBCKT CV4003  1 2 3 ; P G C (Triode)
+* Mullard data book 1948 AKA ECC82
+* library format: LTSpice 21-Sep-2025
+X1 1 2 3 ECC82
+.ENDS    CV4003
+
+******************
+.SUBCKT CV4004  1 2 3 ; P G C (Triode)
+* Mullard data book 1948  AKA ECC83
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 ECC83
+.ENDS    CV4004
+
+******************
+.SUBCKT CV4024  1 2 3 ; P G C (Triode)
+* Mullard data book 1948  AKA ECC81
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 ECC81
+.ENDS    CV4024
+
+******************
+.SUBCKT EC40  1 2 3 ; P G C (Triode)
+* universal vademecum (1960)
+* library format: LTSpice 18-Sep-2011
+X1 1 2 3 TRIODE MU=122.22 EX=2.043 KG1=317.3 KP=141.52 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.1p CGP=3.4p CCP=0.1p ;
+.ENDS    EC40
+
+******************
+.SUBCKT EC41  1 2 3 ; P G C (Triode)
+* Mullard data book 1968 AKA 6R4
+* library format: LTSpice 18-Sep-2011
+X1 1 2 3 TRIODE MU=16.26 EX=1.295 KG1=868.4 KP=80.50 KVB=1009.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=1.8p CGP=1.6p CCP=0.7p ;
+.ENDS    EC41
+
+******************
+.SUBCKT EC52  1 2 3 ; P G C (Triode)
+* Mullard data book 1948
+* library format: LTSpice 22-Aug-2025
+X1 1 2 3 TRIODE MU=64.33 EX=0.964 KG1=233.6 KP=687.04 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    EC52
+
+******************
+.SUBCKT EC80  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969
+* library format: LTSpice 08-May-2012
+X1 1 2 3 TRIODE MU=122.22 EX=2.043 KG1=317.3 KP=141.52 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.1p CGP=3.4p CCP=0.1p ;
+.ENDS    EC80
+
+******************
+.SUBCKT EC81  1 2 3 ; P G C (Triode)
+* Mullard data book 1968 AKA 6R4
+* library format: LTSpice 18-Sep-2011
+X1 1 2 3 TRIODE MU=16.26 EX=1.295 KG1=868.4 KP=80.50 KVB=1009.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=1.8p CGP=1.6p CCP=0.7p ;
+.ENDS    EC81
+
+******************
+.SUBCKT EC90  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969
+* library format: LTSpice 22-Aug-2025
+X1 1 2 3 TRIODE MU=32.19 EX=1.084 KG1=558.5 KP=62.70 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=1.5p CGP=1.4p CCP=1.5p ;
+.ENDS    EC90
+
+******************
+.SUBCKT EC91  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969
+* library format: LTSpice 07-May-2012
+X1 1 2 3 TRIODE MU=103.54 EX=1.170 KG1=215.0 KP=385.80 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=8.5p CGP=2.5p CCP=0.2p ;
+.ENDS    EC91
+
+******************
+.SUBCKT EC92  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969
+* library format: LTSpice 07-May-2012
+X1 1 2 3 ECC81
+.ENDS    EC92
+
+******************
+.SUBCKT ECC40  1 2 3 ; P G C (Triode)
+* Same as E80CC
+* library format: LTSpice 31-May-2008
+X1 1 2 3 E80CC
+.ENDS    ECC40
+
+******************
+.SUBCKT E80CC  1 2 3 ; P G C (Triode)
+* Philips data sheet Dec 1968
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=32.74 EX=1.468 KG1=2447.9 KP=235.61 KVB=2119.4 VCT=0.50 ALPHA=.04m BETA=.1U CCG=3.0p CGP=2.2p CCP=2.3p ;
+.ENDS    E80CC
+
+******************
+.SUBCKT ECC81  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969 12AT7
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=77.09 EX=1.077 KG1=320.1 KP=231.05 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    ECC81
+
+******************
+.SUBCKT ECC82  1 2 3 ; P G C (Triode)
+* Mullard data book Jan 1969 AKA 12AU7A 12AU7
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=19.98 EX=1.291 KG1=1359.0 KP=87.34 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    ECC82
+
+******************
+.SUBCKT ECC83  1 2 3 ; P G C (Triode)
+* Mullard data sheet 1970 AKA 12AX7A 7025
+* library format: LTSpice 07-May-2012
+X1 1 2 3 TRIODE MU=99.95 EX=1.431 KG1=1659.3 KP=688.57 KVB=284.1 VCT=0.50 ALPHA=.01m BETA=.1U CCG=2.3p CGP=2.4p CCP=0.9p ;
+.ENDS    ECC83
+
+******************
+.SUBCKT ECC84  1 2 3 ; P G C (Triode)
+* Philips data book 1955
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=27.76 EX=1.309 KG1=492.0 KP=95.80 KVB=379.2 VCT=0.50 ALPHA=.04m BETA=.1U CCG=2.8p CGP=1.9p CCP=1.0p ;
+.ENDS    ECC84
+
+******************
+.SUBCKT ECC85  1 2 3 ; P G C (Triode)
+* Philips data book 1954
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=69.50 EX=1.481 KG1=551.4 KP=224.40 KVB=2689.3 VCT=0.50 ALPHA=.04m BETA=.1U CCG=2.8p CGP=3.7p CCP=1.0p ;
+.ENDS    ECC85
+
+******************
+.SUBCKT ECC86  1 2 3 ; P G C (Triode)
+* Philips data book 1959
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=29.91 EX=1.596 KG1=294.6 KP=48.11 KVB=210.6 VCT=0.50 ALPHA=.04m BETA=.1U CCG=3.7p CGP=1.8p CCP=2.3p ;
+.ENDS    ECC86
+
+******************
+.SUBCKT ECC87  1 2 3 ; P G C (Triode)
+* Same as E80CC
+* library format: LTSpice 31-May-2008
+X1 1 2 3 E80CC
+.ENDS    ECC87
+
+******************
+.SUBCKT ECC88  1 2 3 ; P G C (Triode)
+* Philips Data sheet March 1957 AKA 6DJ8
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=31.04 EX=1.069 KG1=210.9 KP=369.74 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=3.7p CGP=2.3p CCP=2.2p ;
+.ENDS    ECC88
+
+******************
+.SUBCKT E88CC  1 2 3 ; P G C (Triode)
+* Mullard Data sheet December 1968 AKA 6DJ8, ECC88, 6922
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=35.56 EX=1.134 KG1=196.7 KP=278.19 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=3.7p CGP=2.3p CCP=2.2p ;
+.ENDS    E88CC
+
+******************
+.SUBCKT ECC801S  1 2 3 ; P G C (Triode)
+* Telefunken Data Sheet AKA 6201
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=77.15 EX=1.078 KG1=320.0 KP=230.75 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    ECC801S
+
+******************
+.SUBCKT ECC802S  1 2 3 ; P G C (Triode)
+* Telefunken Data sheet AKA 6189
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=24.10 EX=1.254 KG1=1023.1 KP=65.28 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    ECC802S
+
+******************
+.SUBCKT ECC803S  1 2 3 ; P G C (Triode)
+* Telefunken Data sheet AKA 6057
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=98.32 EX=1.456 KG1=1722.8 KP=749.41 KVB=131.2 VCT=0.50 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.4p CCP=1.1p ;
+.ENDS    ECC803S
+
+
+******************
+.SUBCKT ECC99  1 2 3 ; P G C (Triode)
+* JJ Data sheet
+* library format: LTSpice 07-Nov-2009
+X1 1 2 3 TRIODE MU=23.21 EX=1.482 KG1=460.3 KP=178.32 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    ECC99
+
+******************
+.SUBCKT LD1  1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 04-Apr-2014
+X1 1 2 3 TRIODE MU=13.37 EX=1.496 KG1=2049.8 KP=31.01 KVB=647.3 VCT=0.00 ALPHA=.04m BETA=.1U CCG=1.6p CGP=1.1p CCP=0.7p ;
+.ENDS    LD1
+
+******************
+.SUBCKT LD2  1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 04-Apr-2014
+X1 1 2 3 TRIODE MU=24.48 EX=1.241 KG1=399.1 KP=270.21 KVB=2936.4 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.0p CGP=1.5p CCP=3.5p ;
+.ENDS    LD2
+
+******************
+.SUBCKT LD5  1 2 3 ; P G C (Triode)
+* Telefunken
+* library format: LTSpice 04-Apr-2014
+X1 1 2 3 TRIODE MU=23.32 EX=1.125 KG1=192.2 KP=140.54 KVB=5289.3 VCT=0.00 ALPHA=.04m BETA=.1U CCG=3.8p CGP=2.3p CCP=2.2p ;
+.ENDS    LD5
+
+******************
+.SUBCKT RD12Tf  1 2 3 ; P G C (Triode)
+* Lorenz
+* library format: LTSpice 29-Dec-2013
+X1 1 2 3 TRIODE MU=51.96 EX=1.400 KG1=420.1 KP=7807.13 KVB=15216.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=7.7p CGP=4.7p CCP=1.6p ;
+.ENDS    RD12Tf
+
+******************
+.SUBCKT RL12T1  1 2 3 ; P G C (Triode)
+* Telefunken 194?
+* library format: LTSpice 07-Apr-2014
+X1 1 2 3 TRIODE MU=16.28 EX=1.288 KG1=924.9 KP=1578.18 KVB=424.4 VCT=0.00 ALPHA=.04m BETA=.1U CCG=1.7p CGP=1.4p CCP=0.5p ;
+.ENDS    RL12T1
+
+******************
+.SUBCKT RL12T2  1 2 3 ; P G C (Triode)
+* Telefunken 194?
+* library format: LTSpice 07-Apr-2014
+X1 1 2 3 TRIODE MU=11.72 EX=1.193 KG1=1327.0 KP=79.46 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=3.2p CGP=3.2p CCP=0.8p ;
+.ENDS    RL12T2
+
+******************
+.SUBCKT RL12T15  1 2 3 ; P G C (Triode)
+* Telefunken 194?
+* library format: LTSpice 07-Apr-2014
+X1 1 2 3 TRIODE MU=15.22 EX=1.338 KG1=1177.1 KP=136.72 KVB=6020.1 VCT=0.00 ALPHA=.04m BETA=.1U CCG=7.0p CGP=5.0p CCP=5.5p ;
+.ENDS    RL12T15
+
+******************
+.SUBCKT RL12T75  1 2 3 ; P G C (Triode)
+* Telefunken 194?
+* library format: LTSpice 07-Apr-2014
+X1 1 2 3 TRIODE MU=15.58 EX=1.125 KG1=113.7 KP=129.71 KVB=2492.6 VCT=0.00 ALPHA=.04m BETA=.1U CCG=23.0p CGP=17.0p CCP=14.0p ;
+.ENDS    RL12T75
+
+******************
+.SUBCKT VR137  1 2 3 ; P G C (Triode)
+* Mullard data book 1948
+* library format: LTSpice 22-Aug-2025
+X1 1 2 3 TRIODE MU=64.33 EX=0.964 KG1=233.6 KP=687.04 KVB=300.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=2.3p CGP=2.2p CCP=1.0p ;
+.ENDS    VR137
+
+************************************************
+* Pentodes with G3 NOT cnnected to the cathode *
+************************************************
+
+******************
+.SUBCKT 6CF8_G3  1 2 3 4 5 ; C G1 G2 G3 A (Pentode)
+* same as EF86_G3
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 5 EF86_G3 ;
+.ENDS    6CF8_G3
+
+******************
+.SUBCKT EL36_G3  1 2 3 4 5 ; C G1 G2 G3 A (Pentode)
+* same as EF86_G3
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 5 EF86_G3 ;
+.ENDS    EL36_G3
+
+******************
+.SUBCKT EL37A_G3  1 2 3 4 5 ; C G1 G2 G3 A (Pentode)
+* same as EF86_G3
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 5 EF86_G3 ;
+.ENDS    EL37A_G3
+
+******************
+.SUBCKT EF86_G3  1 2 3 4 5 ; C G1 G2 G3 A (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729 EF806
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 5 PENTODE MU=34.90 EX=1.350 KG1=2300 KG2=1327 KP=222.06 KVB=4.7 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.3p CPG1=0.6p CCP=5.1p CCG3=0.05p CPG3=2p
+.ENDS    EF86_G3
+
+*****************************************************************
+* Beam Tetrodes and Pentodes with G3 internally connected to    *
+* the cathode or is connected to the cathode expernally in the  *
+* appliction                                                    *
+*****************************************************************
+
+******************
+.SUBCKT 6AC7  1 2 3 4 ; A G2 G1 C (Pentode)
+* RCA Data sheet
+* library format: LTSpice 11-Nov-2014
+X1 1 2 3 4 PENTODE1 MU=49.00 EX=1.350 KG1=334.9 KG2=205 KP=211.87 KVB=59.7 VCT=0.00 ALPHA=.04m BETA=.1U CCG=11p CPG1=0.015p CCP=5p ;
+.ENDS    6AC7
+
+******************
+.SUBCKT 6AG7  1 2 3 4 ; A G2 G1 C (Pentode)
+* GE Data sheet
+* library format: LTSpice 11-Nov-2014
+X1 1 2 3 4 PENTODE1 MU=27.90 EX=0.971 KG1=169.6 KG2=115 KP=293.92 KVB=114.2 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.2p CPG1=0.060p CCP=7.5p ;
+.ENDS    6AG7
+
+******************
+.SUBCKT 6AK5 1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet  AKA 5654, EF95
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 EF95 ;
+.ENDS    6AK5
+
+******************
+.SUBCKT 6AM5 1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA EL91
+* library format: LTSpice 21-Aug-2025
+X1 1 2 3 4 EL91
+.ENDS    6AM5
+
+******************
+.SUBCKT 6AU6  1 2 3 4 ; A G2 G1 C (Pentode)
+* GE data sheet AKA EF94 6AU6A
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 PENTODE1 MU=36.65 EX=1.376 KG1=1129.4 KG2=650 KP=215.42 KVB=15.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    6AU6
+
+******************
+.SUBCKT 6AU6A  1 2 3 4 ; A G2 G1 C (Pentode)
+* GE data sheet AKA EF94 6AU6
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 6AU6
+.ENDS    6AU6A
+
+******************
+.SUBCKT  6BK8 1 2 3 4 ; A G2 G1 C (Pentode)
+*  same as EF86
+X1 1 2 3 4 EF86
+.ENDS	6BK8
+
+******************
+.SUBCKT 6BQ5  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard Data Sheet AKA 7189 EL84 N709
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EL84
+.ENDS    6BQ5
+
+******************
+.SUBCKT  6BY7 1 2 3 4 ; A G2 G1 C (Pentode)
+*  same as EF85
+X1 1 2 3 4 EF85
+.ENDS	6BY7
+
+******************
+.SUBCKT  6CF8 1 2 3 4 ; A G2 G1 C (Pentode)
+*  same as EF86
+X1 1 2 3 4 EF86
+.ENDS	6CF8
+
+******************
+.SUBCKT 6CA7 1 2 3 4 ; A G2 G1 C (Pentode) AKA EL34
+* Mullard
+X1 1 2 3 4 EL34 ; call the el34
+.ENDS	6CA7
+
+******************
+.SUBCKT 6CK5  1 2 3 4 ; A G2 G1 C (Pentode) AKA EL41 BF61 N150 6CK5
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL80 ; Call EL80
+.ENDS    6CK5
+
+******************
+.SUBCKT 6CL6  1 2 3 4 ; A G2 G1 C (PENTODE)
+* RCA
+* library format: LTSpice 12-Oct-2011
+X1 1 2 3 4 PENTODE1 MU=20.64 EX=1.351 KG1=469.3 KG2=290 KP=159.49 KVB=67.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.7p CPG1=0.560p CCP=2.5p ;
+.ENDS    6CL6
+
+******************
+.SUBCKT 6EH5  1 2 3 4 ; A G2 G1 C (Pentode)
+* GE data sheet
+* library format: LTSpice 14-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=16.46 EX=1.350 KG1=415.4 KG2=240 KP=85.16 KVB=13.4 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    6EH5
+
+******************
+.SUBCKT  6DA6 1 2 3 4 ; A G2 G1 C (Pentode)
+*  same as EF89
+X1 1 2 3 4 EF89
+.ENDS	6DA6
+
+******************
+.SUBCKT  6DL5 1 2 3 4 ; A G2 G1 C (Pentode)
+*  same as EF95
+X1 1 2 3 4 EF95
+.ENDS	6DL5
+
+******************
+.SUBCKT 6L6GB 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Sylvania
+X1 1 2 3 4 6L6GC ; call 6L6GC
+.ENDS	6L6GB
+
+******************
+.SUBCKT 6L6GC  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* GE Data sheet
+* library format: LTSpice 02-May-2012
+X1 1 2 3 4 PENTODE1 MU=8.7 EX=1.35 KG1=1460 KG2=850 KP=48 KVB=12 VCT=0.00 ALPHA=.2m BETA=2U CCG=10.0p CPG1=0.600p CCP=6.5p ;
+.ENDS    6L6GC
+
+******************
+.SUBCKT 6L6WGT 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* same as 6L6GC
+X1 1 2 3 4 6L6GC ; call 6L6GC
+.ENDS	6L6WGT
+
+******************
+.SUBCKT 6V6 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* GE data sheet
+* library format: LTSpice 17-Nov-2009
+X1 1 2 3 4 6V6GTA ; call 6V6GTA
+.ENDS    6V6
+
+******************
+.SUBCKT 6V6GT 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* GE data sheet
+* library format: LTSpice 17-Nov-2009
+X1 1 2 3 4 6V6GTA ; call 6V6GTA
+.ENDS    6V6GT
+
+******************
+.SUBCKT 6V6GTA  1 2 3 4 ; A G2 G1 C (Beam Tetrode) AKA 6V6 6V6GT EL90
+* GE data sheet
+* library format: LTSpice 17-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=10.70 EX=1.310 KG1=1672.0 KG2=940 KP=41.16 KVB=12.7 VCT=0.00 ALPHA=.1m BETA=1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    6V6GTA
+
+******************
+.SUBCKT 807  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* RCA Data sheet
+* library format: LTSpice 26-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=6.42 EX=1.350 KG1=1717.2 KG2=996 KP=775.50 KVB=23.6 VCT=0.00 ALPHA=.2m BETA=2U CCG=16.5p CPG1=1.000p CCP=9.0p ;
+.ENDS    807
+
+******************
+.SUBCKT 814  1 2 3 4 ; A G2 G1 C (Pentode)
+* RCA
+* library format: LTSpice 20-Apr-2014
+X1 1 2 3 4 PENTODE1 MU=9.52 EX=1.350 KG1=2981.5 KG2=1800 KP=421.77 KVB=84.3 VCT=0.00 ALPHA=.2m BETA=2U CCG=13.5p CPG1=0.150p CCP=13.5p ;
+.ENDS    814
+******************
+
+.SUBCKT 5654 1 2 3 4 ; P G2 G1 C (Pentode)
+* Tung Sol Data Sheet AKA EF95 6AK5
+* library format: LTSpice 14-Apr-2012
+X1 1 2 3 4 EF95 ; same as EF95
+.ENDS    5654
+
+******************
+.SUBCKT 5879  1 2 3 4 ; A G2 G1 C (Pentode)
+* RCA data sheet
+* library format: LTSpice 14-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=22.01 EX=1.395 KG1=3488.1 KG2=3000 KP=117.73 KVB=15.1 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    5879
+
+******************
+.SUBCKT 5881  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Tung-Sol Data Book
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 PENTODE1 MU=8.35 EX=1.484 KG1=2507.1 KG2=1500 KP=53.86 KVB=14.4 VCT=0.00 ALPHA=.2m BETA=2U CCG=10.0p CPG1=0.6p CCP=6.5p ;
+.ENDS    5881
+
+******************
+.SUBCKT 6146B  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* RCA Data sheet
+* library format: LTSpice 16-Sep-2025
+X1 1 2 3 4 PENTODE3 MU=5.68 EX=1.350 KG1=865.6 KG2=519.4 KP=16.20 KVB=72.5 VCT=0.00 ALPHA=.2m BETA=2U CCG=13.0p CPG1=0.220p CCP=8.5p ;
+.ENDS    6146B
+
+******************
+.SUBCKT  6267 1 2 3 4 ; A G2 G1 C (Pentode)
+*  same as EF86
+X1 1 2 3 4 EF86
+.ENDS	6267
+
+******************
+.SUBCKT 6550  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Tung-Sol Data Book 1963
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 PENTODE1 MU=8.61 EX=1.435 KG1=1066.6 KG2=640 KP=39.55 KVB=20.5 VCT=0.00 ALPHA=.3m BETA=2U CCG=15.0p CPG1=0.8p CCP=10.0p ;
+.ENDS    6550
+
+******************
+.SUBCKT 6550A  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* GE Data sheet 1973
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 PENTODE1 MU=10.81 EX=1.397 KG1=703.2 KG2=410 KP=27.68 KVB=19.1 VCT=0.00 ALPHA=.3m BETA=2U CCG=15.0p CPG1=0.8p CCP=10.0p ;
+.ENDS    6550A
+
+******************
+.SUBCKT 6550C  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Svetlana's website
+* library format: LTSpice 27-May-2008
+X1 1 2 3 4 PENTODE1 MU=8.33 EX=1.350 KG1=789.8 KG2=430 KP=44.65 KVB=30.5 VCT=0.00 ALPHA=.3m BETA=2U CCG=14.0p CPG1=0.8p CCP=12.0p ;
+.ENDS    SV6550C
+
+******************
+.SUBCKT  7027 1 2 3 4
+X1 1 2 3 4 6L6GC	; same as 6L6GCmodel
+.ENDS 7027A
+
+******************
+.SUBCKT  7027A 1 2 3 4
+X1 1 2 3 4 6L6GC	; same as 6L6GCmodel
+.ENDS 7027A
+
+******************
+.SUBCKT 7189  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard Data Sheet AKA 6BQ5 EL84 N709
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 6BQ5 ; call 6BQ5
+.ENDS    7189
+
+******************
+.SUBCKT  7581 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Tung-Sol same as 6L6GC Higher Anode power
+X1 1 2 3 4 6L6GC
+.ENDS	7581
+
+******************
+.SUBCKT  7581A 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Tung-Sol same as 6L6GC Higher Anode power
+X1 1 2 3 4 6L6GC
+.ENDS	7581A
+
+******************
+.SUBCKT  7591A 1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* Tung-Sol same as 6L6GC Higher Anode power
+X1 1 2 3 4 7868 ; call 7868
+.ENDS	7581A
+
+******************
+.SUBCKT 7868  1 2 3 4 ; A G2 G1 C (Pentode)
+* RCA data sheet
+* library format: LTSpice 24-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=25.18 EX=1.350 KG1=400.2 KG2=240 KP=55.60 KVB=24.9 VCT=0.00 ALPHA=.2m BETA=2U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    7868
+
+******************
+.SUBCKT 8298A  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* RCA Data sheet
+* library format: LTSpice 16-Sep-2025
+X1 1 2 3 4 6146B
+.ENDS    8298A
+
+******************
+.SUBCKT CV118  1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 VR65;
+.ENDS    CV118
+
+******************
+.SUBCKT CV850  1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 6AK5;
+.ENDS    CV850
+
+******************
+.SUBCKT CV1053  1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 EF39;
+.ENDS    CV1053
+
+******************
+.SUBCKT CV1065 1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 VR65;
+.ENDS    CV1065
+
+******************
+.SUBCKT CV1091 1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 EF50;
+.ENDS    CV1091
+
+******************
+.SUBCKT CV1136 1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 EF54;
+.ENDS    CV1136
+
+******************
+.SUBCKT CV4010  1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 6AK5;
+.ENDS    CV4010
+
+******************
+.SUBCKT EF1  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=29.76 EX=1.350 KG1=1803.6 KG2=870 KP=177.00 KVB=6.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=7.1p CPG1=0.002p CCP=7.7p ;
+.ENDS    EF1
+
+******************
+.SUBCKT EF2  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=32.03 EX=1.350 KG1=1675.7 KG2=790 KP=50.91 KVB=6.7 VCT=0.00 ALPHA=.04m BETA=.1U CCG=7.1p CPG1=0.002p CCP=7.7p ;
+.ENDS    EF2
+
+******************
+.SUBCKT EF5  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=11.64 EX=1.350 KG1=3602.2 KG2=1900 KP=39.24 KVB=13.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.4p CPG1=0.003p CCP=6.9p ;
+.ENDS    EF5
+
+******************
+.SUBCKT EF6  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA EF86
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 EF86
+.ENDS    EF6
+
+******************
+.SUBCKT EF7  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA EF12
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 EF12
+.ENDS    EF7
+
+******************
+.SUBCKT EF8  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA EF38
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 EF39;
+.ENDS    EF8
+
+******************
+.SUBCKT EF9  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard data sheet  AKA EF39, VR53
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 EF39;
+.ENDS    EF9
+
+******************
+.SUBCKT EF11  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF41;
+.ENDS    EF11
+
+******************
+.SUBCKT EF12  1 2 3 4 ; A G2 G1 C (Pentode)
+* TELEFUNKEN data sheet
+* library format: LTSpice 22-Sep-2020
+X1 1 2 3 4 PENTODE1 MU=26.96 EX=1.350 KG1=2122.7 KG2=1200 KP=161.49 KVB=9.8 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.5p CPG1=0.002p CCP=6.5p ;
+.ENDS    EF12
+
+******************
+.SUBCKT EF13  1 2 3 4 ; A G2 G1 C (Pentode)
+* TELEFUNKEN data sheet
+* library format: LTSpice 08-Jan-2024
+X1 1 2 3 4 PENTODE1 MU=130.35 EX=1.350 KG1=692.1 KG2=423 KP=43.43 KVB=31.4 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.5p CPG1=0.002p CCP=6.5p ;
+.ENDS    EF13
+
+******************
+.SUBCKT EF14  1 2 3 4 ; A G2 G1 C (Pentode)
+* TELEFUNKEN data sheet
+* library format: LTSpice 07-May-2018
+X1 1 2 3 4 PENTODE1 MU=31.74 EX=1.350 KG1=606.6 KG2=350 KP=164.65 KVB=9.4 VCT=0.00 ALPHA=.04m BETA=.1U CCG=9.5p CPG1=0.010p CCP=8.2p ;
+.ENDS    EF14
+
+******************
+.SUBCKT EF15  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF85 ;
+.ENDS    EF15
+
+******************
+.SUBCKT EF36  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF86 ;
+.ENDS    EF36
+
+******************
+.SUBCKT EF37  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF86 ;
+.ENDS    EF37
+
+******************
+.SUBCKT EF37A 1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF86 ;
+.ENDS    EF37A
+
+******************
+.SUBCKT EF38  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard data sheet
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=51.21 EX=1.350 KG1=3144.8 KG2=2000 KP=39.29 KVB=23.6 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.6p CPG1=0.007p CCP=7.8p ;
+.ENDS    EF38
+
+******************
+.SUBCKT EF39  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard data sheet  AKA EF9, VR53, CV1053
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=212.27 EX=1.350 KG1=797.7 KG2=408 KP=30.86 KVB=13.1 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.5p CPG1=0.003p CCP=7.2p ;
+.ENDS    EF39
+
+******************
+.SUBCKT EF40  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF86 ;
+.ENDS    EF40
+
+******************
+.SUBCKT EF41  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Jan-2024
+X1 1 2 3 4 PENTODE1 MU=51.56 EX=1.105 KG1=706.5 KG2=400 KP=42.69 KVB=7.8 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.4p CPG1=0.002p CCP=3.1p ;
+.ENDS    EF41
+
+******************
+.SUBCKT EF42  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Jan-2024
+X1 1 2 3 4 PENTODE1 MU=54.65 EX=1.105 KG1=271.7 KG2=165 KP=268.91 KVB=58.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    EF42
+
+******************
+.SUBCKT EF43  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF85 ;
+.ENDS    EF43
+
+******************
+.SUBCKT EF50  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=62.23 EX=1.350 KG1=758.9 KG2=397 KP=427.46 KVB=16.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    EF50
+
+******************
+.SUBCKT EF51  1 2 3 4 ; A G2 G1 C (Pentode)
+* Universal Vademecum (1960)
+* library format: LTSpice 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=44.66 EX=1.350 KG1=1192.1 KG2=700 KP=169.23 KVB=17.4 VCT=0.00 ALPHA=.04m BETA=.1U CCG=10.0p CPG1=0.007p CCP=4.0p ;
+.ENDS    EF51
+
+******************
+.SUBCKT EF52  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Jan-2024
+X1 1 2 3 4 PENTODE1 MU=54.65 EX=1.105 KG1=271.7 KG2=165 KP=268.91 KVB=58.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    EF52
+
+******************
+.SUBCKT EF53  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=62.23 EX=1.350 KG1=758.9 KG2=397 KP=427.46 KVB=16.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    EF53
+
+******************
+.SUBCKT EF54  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 22-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=98.85 EX=1.350 KG1=431.6 KG2=251 KP=250.83 KVB=11.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    EF54
+
+******************
+.SUBCKT EF55  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard data sheet
+* library format: LTSpice 12-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=27.89 EX=1.350 KG1=554.0 KG2=307 KP=207.24 KVB=20.1 VCT=0.00 ALPHA=.04m BETA=.1U CCG=15.0p CPG1=1.500p CCP=12.0p ;
+.ENDS    EF55
+
+******************
+.SUBCKT EF80  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 22-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=51.96 EX=1.350 KG1=463.5 KG2=300 KP=214.82 KVB=60.5 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    EF80
+
+******************
+.SUBCKT EF81  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF41;
+.ENDS    EF81
+
+******************
+.SUBCKT EF83  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 30-May-2008
+X1 1 2 3 4 PENTODE1 MU=12.01 EX=1.350 KG1=2830.0 KG2=1700 KP=35.24 KVB=39.1 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.5p CPG1=0.050p CCP=5.5p ;
+.ENDS    EF83
+
+******************
+.SUBCKT EF85  1 2 3 4 ; A G2 G1 C (Pentode)
+* La RadioTechique
+* library format: LTSpice 30-May-2008
+X1 1 2 3 4 PENTODE2 MU=22.39 EX=1.350 KG1=974.2 KG2=565 KP=160.84 KVB=40.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.5p CPG1=0.6p CCP=5.6p ;
+.ENDS    EF85
+
+******************
+.SUBCKT EF86  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729 EF806
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 PENTODE1 MU=34.90 EX=1.350 KG1=2648.1 KG2=1400 KP=222.06 KVB=4.7 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    EF86
+
+******************
+.SUBCKT EF89  1 2 3 4 ; A G2 G1 C (Pentode)
+* La Radiotechnique AKA 6DA6
+* library format: LTSpice 30-May-2008
+X1 1 2 3 4 PENTODE1 MU=30.52 EX=1.350 KG1=926.7 KG2=550 KP=39.49 KVB=23.6 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.5p CPG1=0.0p CCP=5.1p ;
+.ENDS    EF89
+
+******************
+.SUBCKT EF806  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF86 ;
+.ENDS    EF806
+
+******************
+.SUBCKT EF91  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard
+* library format: LTSpice 18-Apr-2010
+X1 1 2 3 4 PENTODE1 MU=59.59 EX=1.557 KG1=875.9 KG2=530 K4=1 KP=556.07 KVB=22.1 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.5p CPG1=0.0p CCP=5.1p ;
+.ENDS    EF91
+
+******************
+.SUBCKT EF92  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard data sheet AKA 6CQ6 W77
+* library format: LTSpice 31-Oct-2010
+X1 1 2 3 4 PENTODE1 MU=42.49 EX=1.557 KG1=2981.3 KG2=1655 KP=55.85 KVB=9.0 VCT=0.00 ALPHA=.04m BETA=.1U CCG=5.5p CPG1=0.002p CCP=5.1p ;
+.ENDS    EF92
+
+******************
+.SUBCKT EF94  1 2 3 4 ; A G2 G1 C (Pentode)
+* GE data sheet AKA 6AU6 6AU6A
+* library format: LTSpice 17-Apr-2010
+X1 1 2 3 4 6AU6 ;
+.ENDS    EF94
+
+******************
+.SUBCKT EF95  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard
+* library format: LTSpice 17-Aug-2020
+X1 1 2 3 4 PENTODE1 MU=29.80 EX=1.350 KG1=1002.4 KG2=570 KP=151.38 KVB=11.2 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.0p CPG1=0.002p CCP=2.1p ;
+.ENDS    EF95
+
+******************
+.SUBCKT EF96  1 2 3 4 ; A G2 G1 C (Pentode)
+* Tung Sol Data Sheet 1957
+* library format: LTSpice 30-Apr-2013
+X1 1 2 3 4 PENTODE1 MU=61.69 EX=0.714 KG1=311.7 KG2=180 KP=280.32 KVB=28.9 VCT=0.00 ALPHA=.04m BETA=.1U CCG=6.6p CPG1=0.020p CCP=3.1p ;
+.ENDS    EF96
+
+******************
+.SUBCKT EF905  1 2 3 4 ; A G2 G1 C (Pentode)
+* Lorenz Data Sheet AKA 5654 6AK5
+* library format: LTSpice 14-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=43.98 EX=0.873 KG1=335.2 KG2=200 KP=183.17 KVB=8.8 VCT=0.00 ALPHA=.04m BETA=.1U CCG=4.0p CPG1=0.020p CCP=2.2p ;
+.ENDS    EF905
+
+******************
+.SUBCKT EL5  1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 19-Sep-2025
+X1 1 2 3 4 EL35 ; Call EL35
+.ENDS    EL5
+
+******************
+.SUBCKT EL11  1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=24.63 EX=1.350 KG1=668.7 KG2=380 KP=107.90 KVB=14.9 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL11
+
+******************
+.SUBCKT EL12  1 2 3 4 ; P G1 C G2 (Pentode)
+* TELEFUNKEN
+* library format: PSPICE 07-May-2018
+X1 1 2 3 4 PENTODE1 MU=18.60 EX=1.350 KG1=477.6 KG2=280 KP=127.90 KVB=44.9 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL12
+
+******************
+.SUBCKT EL13 1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL85 ; Call EL85
+.ENDS    EL13
+
+******************
+.SUBCKT EL31  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1969
+* library format: PSPICE 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=18.68 EX=1.350 KG1=396.9 KG2=243 KP=72.62 KVB=34.4 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL31
+
+******************
+.SUBCKT EL32  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1969
+* library format: PSPICE 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=12.65 EX=0.975 KG1=556.0 KG2=332 KP=31.89 KVB=19.5 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL32
+
+******************
+.SUBCKT EL33  1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=24.63 EX=1.350 KG1=668.7 KG2=388 KP=107.90 KVB=14.9 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL33
+
+******************
+.SUBCKT EL34  1 2 3 4 ; A G2 G1 C (PENTODE)
+* Mullard Data Book Jan 1969
+* library format: LTSpice 20-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=14.18 EX=1.175 KG1=282.3 KG2=170 KP=47.01 KVB=34.6 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL34
+
+******************
+.SUBCKT EL35  1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 19-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=8.81 EX=1.350 KG1=2220.5 KG2=1332.3 KP=1507.40 KVB=13.5 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL35
+
+******************
+.SUBCKT EL36  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1969
+* library format: PSPICE 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=7.24 EX=1.350 KG1=373.9 KG2=225 KP=24.76 KVB=27.5 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL36
+
+******************
+.SUBCKT EL37  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1969
+* library format: PSPICE 12-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=11.01 EX=1.350 KG1=605.9 KG2=350 KP=39.12 KVB=30.6 VCT=0.00 ALPHA=.2m BETA=2U CCG=17.5p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL37
+
+******************
+.SUBCKT EL38  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1960
+* library format: PSPICE 12-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=17.05 EX=1.350 KG1=418.7 KG2=259 KP=88.81 KVB=39.6 VCT=0.00 ALPHA=.2m BETA=2U CCG=17.5p CPG1=1.200p CCP=6.6p ;
+.ENDS    EL38
+
+******************
+.SUBCKT EL41  1 2 3 4 ; A G2 G1 C (Pentode) AKA BF61 N150 6CK5
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL80 ; Call EL80
+.ENDS    EL41
+
+******************
+.SUBCKT EL42  1 2 3 4 ; A G2 G1 C (Pentode) AKA BF62 N151
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL85 ; Call EL85
+.ENDS    EL42
+
+******************
+.SUBCKT EL43  1 2 3 4 ; A G2 G1 C (Pentode) AKA BF62 N151
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL85 ; Call EL85
+.ENDS    EL43
+
+******************
+.SUBCKT EL50 1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 19-Sep-2025
+X1 1 2 3 4 EL35 ; Call EL35
+.ENDS    EL50
+
+******************
+.SUBCKT EL53 1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 11-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=24.63 EX=1.350 KG1=668.7 KG2=388 KP=107.90 KVB=14.9 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL53
+
+******************
+.SUBCKT EL509  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* JJ Data sheet
+* library format: LTSpice 29-May-2008
+X1 1 2 3 4 PENTODE1 MU=8.32 EX=1.350 KG1=130.6 KG2=78 KP=11.62 KVB=24.4 VCT=0.00 ALPHA=.2m BETA=2U CCG=10.0p CPG1=3.0p CCP=6.5p ;
+.ENDS    EL509
+
+******************
+.SUBCKT EL60  1 2 3 4 ; A G2 G1 C (PENTODE)
+* Mullard Data Book Jan 1969
+* library format: LTSpice 20-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=14.18 EX=1.175 KG1=282.3 KG2=170 KP=47.01 KVB=34.6 VCT=0.00 ALPHA=.2m BETA=2U CCG=15.0p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL60
+
+******************
+.SUBCKT EL61  1 2 3 4 ; P G1 C G2 (Pentode)
+* Universal Vademecum (1960)
+* library format: PSPICE 19-Sep-2025
+X1 1 2 3 4 EL35 ; Call EL35
+.ENDS    EL61
+
+******************
+.SUBCKT EL80  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=24.38 EX=1.084 KG1=292.0 KG2=180 KP=153.56 KVB=26.2 VCT=0.00 ALPHA=.05m BETA=1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    EL80
+
+******************
+.SUBCKT EL81  1 2 3 4 ; A G2 G1 C (Pentode) AKA 6CJ6 6DR6
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=6.38 EX=1.461 KG1=887.2 KG2=550 KP=305.97 KVB=18.0 VCT=0.00 ALPHA=.05m BETA=1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    EL81
+
+******************
+.SUBCKT EL82  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1957
+* library format: PSPICE 12-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=11.50 EX=1.350 KG1=519.5 KG2=305 KP=45.43 KVB=33.4 VCT=0.00 ALPHA=.05m BETA=1U CCG=17.5p CPG1=1.000p CCP=8.0p ;
+.ENDS    EL82
+
+******************
+.SUBCKT EL83  1 2 3 4 ; P G1 C G2 (Pentode)
+* Mullard Data Book Jan 1960
+* library format: PSPICE 12-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=25.84 EX=1.350 KG1=594.6 KG2=312 KP=211.87 KVB=13.6 VCT=0.00 ALPHA=.05m BETA=1U CCG=10.8p CPG1=0.100p CCP=6.6p ;
+.ENDS    EL83
+
+******************
+.SUBCKT EL84  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard Data Sheet AKA 7189 6BQ5 N709
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 PENTODE1 MU=21.29 EX=1.240 KG1=401.7 KG2=230 KP=111.04 KVB=17.9 VCT=0.00 ALPHA=.05m BETA=1U CCG=10.0p CPG1=0.6p CCP=5.1p ;
+.ENDS    EL84
+
+******************
+.SUBCKT EL85	1 2 3 4 ; A G2 G1 C (Pentode) AKA 6BN5
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 PENTODE1 MU=15.00 EX=1.350 KG1=1599.0 KG2=900 KP=38.28 KVB=18.8 VCT=0.00 ALPHA=.05m BETA=1U CCG=4.3p CPG1=0.6p CCP=5.1p ;
+.ENDS    EL85
+
+******************
+.SUBCKT EL90	1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* GE data sheet
+* library format: LTSpice 17-Nov-2009
+X1 1 2 3 4 6V6-GTA ; call 6V6GTA
+.ENDS    EL90
+
+******************
+.SUBCKT EL91  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data Sheet AKA 6AM5
+* library format: LTSpice 21-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=13.65 EX=1.288 KG1=1733.9 KG2=970 KP=61.19 KVB=15.1 VCT=0.00 ALPHA=.05m BETA=1U CCG=10.0p CPG1=0.600p CCP=5.1p ;
+.ENDS    EL91
+
+******************
+.SUBCKT EL95  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data Sheet AKA 6DL5
+* library format: LTSpice 21-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=45.21 EX=1.589 KG1=1029.2 KG2=571 KP=30.62 KVB=26.6 VCT=0.00 ALPHA=.05m BETA=1U CCG=10.0p CPG1=0.600p CCP=5.1p ;
+.ENDS    EL95
+
+******************
+.SUBCKT KT55  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* M-O Valve Co AKA Genalex
+* library format: LTSpice 21-Aug-2025
+X1 1 2 3 4 PENTODE2 MU=7.48 EX=1.076 KG1=267.7 KG2=159 KP=69.42 KVB=14.2 VCT=0.00 ALPHA=.2m BETA=2U CCG=14.0p CPG1=0.70p CCP=34.0p ;
+.ENDS    KT55
+
+******************
+.SUBCKT KT61  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* M-O Valve Co AKA Genalex AKA EL33
+* library format: LTSpice 21-Sep-2008
+X1 1 2 3 4 EL33 ; Call EL33
+.ENDS    KT61
+
+******************
+.SUBCKT KT66  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* M-O Valve Co AKA Genalex
+* library format: LTSpice 21-Sep-2008
+X1 1 2 3 4 PENTODE1 MU=11.68 EX=1.197 KG1=510.9 KG2=300 KP=34.89 KVB=22.3 VCT=0.00 ALPHA=.2m BETA=2U CCG=14.5p CPG1=1.1p CCP=10.0p ;
+.ENDS    KT66
+
+******************
+.SUBCKT KT77  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* The M-O Valve Co AKA Genalex
+* library format: LTSpice 19-Sep-2008
+X1 1 2 3 4 PENTODE1 MU=12.49 EX=1.487 KG1=1058.5 KG2=600 KP=56.64 KVB=19.4 VCT=0.00 ALPHA=.2m BETA=2U CCG=16.5p CPG1=1.0p CCP=9.0p ;
+.ENDS    KT77
+
+******************
+.SUBCKT KT88  1 2 3 4 ; A G2 G1 C (Beam Tetrode)
+* The M-O Valve Co AKA Genalex
+* library format: LTSpice 19-Sep-2008
+X1 1 2 3 4 PENTODE1 MU=12.38 EX=1.246 KG1=340.4 KG2=200 KP=26.48 KVB=36.5 VCT=0.00 ALPHA=.3m BETA=2U CCG=14.0p CPG1=0.8p CCP=12.0p ;
+.ENDS    KT88
+
+******************
+.SUBCKT KT90  1 2 3 4 ; A G2 G1 C (PENTODE)
+* Elecrto-Harmonix - New Sensor
+* library format: LTSpice 21-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=22.34 EX=1.350 KG1=307.1 KG2=180 KP=19.90 KVB=14.9 VCT=0.00 ALPHA=.3m BETA=2U CCG=10.0p CPG1=1.80p CCP=29.0p ;
+.ENDS    KT90
+
+******************
+.SUBCKT KT150  1 2 3 4 ; A G2 G1 C (PENTODE)
+* Tung-Sol - New Sensor
+* library format: LTSpice 21-Aug-2025
+X1 1 2 3 4 PENTODE1 MU=22.34 EX=1.350 KG1=277.1 KG2=165 KP=19.90 KVB=14.9 VCT=0.00 ALPHA=.3m BETA=2U CCG=14.0p CPG1=1.75p CCP=10.0p ;
+.ENDS    KT150
+
+******************
+.SUBCKT N77    1 2 3 4 ; A G2 G1 C (Pentode) AKA BF61 EL41 6CK5
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL91 ; Call EL91
+.ENDS    N77
+
+******************
+.SUBCKT N144	1 2 3 4 ; A G2 G1 C (Pentode) AKA BF61 EL41 6CK5
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL91 ; Call EL91
+.ENDS    N144
+
+******************
+.SUBCKT N150	1 2 3 4 ; A G2 G1 C (Pentode) AKA BF61 EL41 6CK5
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL80 ; Call EL80
+.ENDS    N150
+
+******************
+.SUBCKT N151	1 2 3 4 ; A G2 G1 C (Pentode) AKA BF62 EL42
+* Philips data sheet
+* library format: LTSpice 16-Nov-2009
+X1 1 2 3 4 EL85 ; Call EL85
+.ENDS    N151
+
+******************
+.SUBCKT N709  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard Data Sheet AKA 6BQ5 EL84 7189
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EL84 ; call EL84
+.ENDS    N709
+
+******************
+.SUBCKT RL12P10  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 12-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=23.22 EX=1.215 KG1=496.2 KG2=300 KP=1597.55 KVB=35.0 VCT=0.00 ALPHA=.05m BETA=1U CCG=16.5p CPG1=0.050p CCP=10.4p ;
+.ENDS    RL12P10
+
+******************
+.SUBCKT RL12P35  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 22-Sep-2010
+X1 1 2 3 4 PENTODE1 MU=5.54 EX=1.215 KG1=1210.7 KG2=700 KP=13.52 KVB=20.4 VCT=0.00 ALPHA=.05m BETA=1U CCG=10.5p CPG1=0.05p CCP=16.5p ;
+.ENDS    RL12P35
+
+******************
+.SUBCKT RL12P50  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 11-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=6.12 EX=1.215 KG1=757.1 KG2=457 KP=25.10 KVB=35.3 VCT=0.00 ALPHA=.4m BETA=3U CCG=14.5p CPG1=0.080p CCP=9.0p ;
+.ENDS    RL12P50
+
+******************
+.SUBCKT RV2P700  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 13-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=21.80 EX=1.051 KG1=3035.0 KG2=1847 KP=91.71 KVB=12.9 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.1p CPG1=0.010p CCP=3.0p ;
+.ENDS    RV2P700
+
+******************
+.SUBCKT RV2P800  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 13-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=19.71 EX=1.051 KG1=2475.7 KG2=1580 KP=56.69 KVB=9.8 VCT=0.00 ALPHA=.02m BETA=.1U CCG=13.8p CPG1=0.010p CCP=5.7p ;
+.ENDS    RV2P800
+
+******************
+.SUBCKT RV2_4P700  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 13-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=28.57 EX=1.051 KG1=2521.1 KG2=1580 KP=70.73 KVB=9.1 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.1p CPG1=0.010p CCP=3.0p ;
+.ENDS    RV2_4P700
+
+******************
+.SUBCKT RV2_4P701  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 14-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=11.87 EX=1.898 KG1=31293.9 KG2=19000 KP=21.87 KVB=7.9 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.1p CPG1=0.010p CCP=3.0p ;
+.ENDS    RV2_4P701
+
+******************
+.SUBCKT RV2_4P1400  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken
+* library format: LTSpice 14-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=35.95 EX=1.350 KG1=1514.0 KG2=900 KP=168.04 KVB=17.7 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.0p CPG1=0.030p CCP=6.0p ;
+.ENDS    RV2_4P1400
+
+******************
+.SUBCKT RV12P2000  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 24-Feb-2014
+X1 1 2 3 4 PENTODE1 MU=18.59 EX=1.450 KG1=3111.7 KG2=1800 KP=91.92 KVB=11.9 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.6p CPG1=0.005p CCP=3.4p ;
+.ENDS    RV12P2000
+
+******************
+.SUBCKT RV12P2001  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 24-Feb-2014
+X1 1 2 3 4 PENTODE1 MU=25.79 EX=1.051 KG1=1320.1 KG2=750 KP=47.42 KVB=11.8 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.6p CPG1=0.005p CCP=3.7p ;
+.ENDS    RV12P2001
+
+******************
+.SUBCKT RV12P3000  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken data sheet
+* library format: LTSpice 24-Feb-2014
+X1 1 2 3 4 PENTODE1 MU=39.40 EX=1.450 KG1=615.8 KG2=352 KP=312.92 KVB=19.7 VCT=0.00 ALPHA=.02m BETA=.1U CCG=9.5p CPG1=0.045p CCP=8.0p ;
+.ENDS    RV12P3000
+
+******************
+.SUBCKT RV12P4000  1 2 3 4 ; A G2 G1 C (Pentode)
+* Telefunken
+* library format: LTSpice 14-Apr-2012
+X1 1 2 3 4 PENTODE1 MU=38.46 EX=1.167 KG1=946.7 KG2=521 KP=98.10 KVB=5.2 VCT=0.00 ALPHA=.02m BETA=.1U CCG=11.0p CPG1=0.006p CCP=5.5p ;
+.ENDS    RV12P4000
+
+******************
+.SUBCKT VR53  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard data sheet  AKA EF9, EF39
+* library format: LTSpice 05-Oct-2025
+X1 1 2 3 4 EF39;
+.ENDS    VR53
+
+******************
+.SUBCKT VR65  1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=55.64 EX=1.350 KG1=1190.6 KG2=715 KP=4079.70 KVB=13.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.9p CPG1=0.007p CCP=3.1p ;
+.ENDS    VR65
+
+******************
+.SUBCKT VR65A  1 2 3 4 ; A G2 G1 C (Pentode)
+* Ministry of supply data sheet
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 VR65;
+.ENDS    VR65A
+
+******************
+.SUBCKT VR136  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet same as EF54
+* library format: LTSpice 17-Sep-2025
+X1 1 2 3 4 EF54;
+.ENDS    VR136
+
+******************
+.SUBCKT Z719  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA EF80
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF80 ;
+.ENDS    Z719
+
+******************
+.SUBCKT Z729  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6CF8 and 6267 Z729 EF806
+* library format: LTSpice 02-Jun-2008
+X1 1 2 3 4 EF86 ;
+.ENDS    Z729
+
+*******************************
+* Triode Pentode combinations *
+*******************************
+
+******************
+.SUBCKT 7199T  1 2 3 ; P G C (Triode) ; TRIODE SECTION
+* RCA
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=32.71 EX=1.284 KG1=534.8 KP=52.95 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.0p CGP=2.5p CCP=1.0p ;
+.ENDS    7199T
+
+******************
+.SUBCKT 7199P  1 2 3 4 ; A G2 G1 C (PENTODE)
+* Sylvania
+* library format: LTSpice 24-Nov-2013
+X1 1 2 3 4 PENTODE1 MU=95.39 EX=0.920 KG1=222.5 KG2=130 KP=860 KVB=19.1 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.7p CPG1=0.560p CCP=2.5p ;
+.ENDS    7199P
+
+******************
+.SUBCKT 6AB8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL80
+X1 1 2 3 ECL80T ; same as ECL80T
+.ENDS    6AB8T
+
+******************
+.SUBCKT 6AB8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL80
+X1 1 2 3 4 ECL80P ; same as ECL80P
+.ENDS	6AB8P
+
+******************
+.SUBCKT 6AN8T  1 2 3 ; P G C (Triode) ; TRIODE SECTION
+* Sylvania Data sheet
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 TRIODE MU=25.23 EX=1.350 KG1=772.2 KP=65.20 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=2.7p CGP=2.2p CCP=0.8p ;
+.ENDS    6AN8T
+
+******************
+.SUBCKT 6AN8P  1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Sylvania Data sheet
+* library format: LTSpice 01-Jun-2008
+X1 1 2 3 4 PENTODE1 MU=47.04 EX=1.350 KG1=487.2 KG2=280 KP=113.02 KVB=17.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.7p CPG1=0.6p CCP=2.5p ;
+.ENDS    6AN8P
+
+******************
+.SUBCKT 6AU8T  1 2 3 ; P G C (Triode)
+* Tung Sol Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 TRIODE MU=41.45 EX=1.438 KG1=764.0 KP=171.59 KVB=119.6 VCT=0.00 ALPHA=.02m BETA=.1U CCG=2.7p CGP=2.2p CCP=0.8p ;
+.ENDS    6AU8T
+
+******************
+.SUBCKT 6AU8P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Tung Sol Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=29.41 EX=1.350 KG1=741.4 KG2=440 KP=112.75 KVB=19.2 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.7p CPG1=0.560p CCP=2.5p ;
+.ENDS    6AU8P
+
+******************
+.SUBCKT 6AW8T  1 2 3 ; P G C (Triode)
+* RCA Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 TRIODE MU=73.45 EX=1.169 KG1=439.2 KP=395.33 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=2.7p CGP=2.2p CCP=0.8p ;
+.ENDS    6AW8T
+
+******************
+.SUBCKT 6AW8P  1 2 3 4 ; A G2 G1 C (Pentode)
+* RCA Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=28.97 EX=1.350 KG1=534.7 KG2=321 KP=265.60 KVB=39.5 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.2p CPG1=2.200p CCP=0.3p ;
+.ENDS    6AW8P
+
+******************
+.SUBCKT 6AX8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent
+X1 1 2 3 ECF80T ; same as ECF 80
+.ENDS    6AX8T
+
+******************
+.SUBCKT 6AX8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent
+X1 1 2 3 4 ECF80P ; same as ECF 80
+.ENDS	6AX8P
+
+******************
+.SUBCKT 6BA8T  1 2 3 ; P G C (Triode)
+* Sylvainia Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 TRIODE MU=21.92 EX=1.308 KG1=740.2 KP=83.55 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=2.7p CGP=2.2p CCP=0.8p ;
+.ENDS    6BA8T
+
+******************
+.SUBCKT 6BA8P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Sylvania Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=29.61 EX=1.350 KG1=552.7 KG2=314 KP=313.89 KVB=17.2 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.6p CPG1=0.036p CCP=10.0p ;
+.ENDS    6BA8P
+
+******************
+.SUBCKT 6BL8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent
+X1 1 2 3 ECF80T ; same as ECF 80
+.ENDS    6BL8T
+
+******************
+.SUBCKT 6BL8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent
+X1 1 2 3 4 ECF80P ; same as ECF 80
+.ENDS	6BL8P
+
+******************
+.SUBCKT 6BM8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL82
+X1 1 2 3 ECL82T ; same as ECL82T
+.ENDS    6BM8T
+
+******************
+.SUBCKT 6BM8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL82
+X1 1 2 3 4 ECL82P ; same as ECL82P
+.ENDS	6BM8P
+
+******************
+.SUBCKT 6BR8T  1 2 3 ; P G C (Triode)
+* GEC Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 TRIODE MU=45.66 EX=1.237 KG1=332.5 KP=118.20 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=1.0p CGP=1.8p CCP=2.5p ;
+.ENDS    6BR8T
+
+******************
+.SUBCKT 6BR8P  1 2 3 4 ; A G2 G1 C (Pentode)
+* GEC Data sheet
+* library format: LTSpice 22-Sep-2025
+X1 1 2 3 4 PENTODE1 MU=25.20 EX=1.350 KG1=1330.8 KG2=648.5 KP=343.37 KVB=22.2 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.0p CPG1=0.008p CCP=3.5p ;
+.ENDS    6BR8P
+
+******************
+.SUBCKT 6DX8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL84
+X1 1 2 3 ECL84T ; same as ECL84T
+.ENDS    6DX8T
+
+******************
+.SUBCKT 6DX8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL84
+X1 1 2 3 4 ECL84P ; same as ECL84P
+.ENDS	6DX8P
+
+******************
+.SUBCKT 6GV8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL85
+X1 1 2 3 ECL85T ; same as ECL85T
+.ENDS    6GV8T
+
+******************
+.SUBCKT 6GV8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL85
+X1 1 2 3 4 ECL85P ; same as ECL85P
+.ENDS	6GV8P
+
+******************
+.SUBCKT 6GW8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL86
+X1 1 2 3 ECL86T ; same as ECL86T
+.ENDS    6GW8T
+
+******************
+.SUBCKT 6GW8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL86
+X1 1 2 3 4 ECL86P ; same as ECL86P
+.ENDS	6GW8P
+
+******************
+.SUBCKT 6HG8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent
+X1 1 2 3 ECF86T ; same as ECF 86
+.ENDS    6HG8T
+
+******************
+.SUBCKT 6HG8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent
+X1 1 2 3 4 ECF86P ; same as ECF 86
+.ENDS	6HG8P
+
+******************
+.SUBCKT 6U8T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent
+X1 1 2 3 ECF82T ; same as ECF 82
+.ENDS    6U8T
+
+******************
+.SUBCKT 6U8P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent
+X1 1 2 3 4 ECF82P ; same as ECF 82
+.ENDS	6U8P
+
+******************
+.SUBCKT ECF12T  1 2 3 ; P G C (Triode)
+* Universal Vademecum (1960)
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 TRIODE MU=28.20 EX=1.561 KG1=1621.2 KP=56.72 KVB=8368.5 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.3p CGP=1.8p CCP=2.7p ;
+.ENDS    ECF12T
+
+******************
+.SUBCKT ECF12P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet
+* library format: LTSpice 08-Oct-2025
+X1 1 2 3 4 PENTODE1 MU=19.25 EX=1.350 KG1=2986.4 KG2=1419 KP=118.76 KVB=15.2 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.0p CPG1=0.002p CCP=5.0p ;
+.ENDS    ECF12P
+
+******************
+.SUBCKT ECF80T  1 2 3 ; P G C (Triode)
+* Philips data sheet AKA 6AX8 6BL8 P
+* library format: LTSpice 29-Apr-2012
+X1 1 2 3 TRIODE MU=22.63 EX=1.318 KG1=624.8 KP=72.36 KVB=578.3 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.0p CGP=2.2p CCP=2.3p ;
+.ENDS    ECF80T
+
+******************
+.SUBCKT ECF80P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips data sheet AKA 6BL8
+* library format: LTSpice 31-May-2008
+X1 1 2 3 4 PENTODE1 MU=46.13 EX=1.350 KG1=688.5 KG2=400 KP=149.94 KVB=8.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECF80P
+
+******************
+.SUBCKT ECF82T  1 2 3 ; P G C (Triode)
+* WF data sheet AKA 6U8
+* library format: LTSpice 29-Dec-2018
+X1 1 2 3 TRIODE MU=51.61 EX=1.265 KG1=310.3 KP=104.73 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.0p CGP=2.2p CCP=2.3p ;
+.ENDS    ECF82T
+
+******************
+.SUBCKT ECF82P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Universal Vademecum (1960) AKA 6U8
+* library format: LTSpice 31-May-2008
+X1 1 2 3 4 PENTODE1 MU=37.97 EX=1.350 KG1=849.8 KG2=500 KP=90.97 KVB=20.1 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECF82P
+
+******************
+.SUBCKT ECF83T  1 2 3 ; P G C (Triode)
+* Universal Vademecum (1960)
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=11.83 EX=1.052 KG1=521.1 KP=69.30 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.2p CGP=3.5p CCP=3.1p ;
+.ENDS    ECF83T
+
+******************
+.SUBCKT ECF83P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Universal Vademecum (1960)
+* library format: LTSpice 31-May-2008
+X1 1 2 3 4 PENTODE1 MU=12.24 EX=1.350 KG1=2401.0 KG2=1400 KP=27.36 KVB=23.5 VCT=0.00 ALPHA=.02m BETA=.1U CCG=5.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECF83P
+
+******************
+.SUBCKT ECF86T  1 2 3 ; P G C (Triode)
+* Mazda Belvu Data Book  AKA 6HG8
+* library format: LTSpice 31-May-2008
+X1 1 2 3 TRIODE MU=16.08 EX=1.162 KG1=601.4 KP=79.68 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECF86T
+
+******************
+.SUBCKT ECF86P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Sylvania Technical Manual AKA 6HG8
+* library format: LTSpice 31-May-2008
+X1 1 2 3 4 PENTODE1 MU=64.17 EX=1.350 KG1=328.7 KG2=190 KP=394.31 KVB=26.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECF86P
+
+******************
+.SUBCKT ECL80T  1 2 3 ; P G C (Triode)
+* Philips Data book 1951 AKA 6AB8
+* library format: LTSpice 05-Feb-2009
+X1 1 2 3 TRIODE MU=29.30 EX=1.332 KG1=1443.9 KP=45.50 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL80T
+
+******************
+.SUBCKT ECL80P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data book 1951 AKA 6AB8
+* library format: LTSpice 05-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=39.01 EX=0.925 KG1=228.9 KG2=135 KP=50.26 KVB=21.2 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL80P
+
+******************
+.SUBCKT ECL81T  1 2 3 ; P G C (Triode)
+* universal vademecum (1960)
+* library format: LTSpice 05-Feb-2009
+X1 1 2 3 TRIODE MU=66.31 EX=1.390 KG1=1400.2 KP=369.30 KVB=2.5 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL81T
+
+******************
+.SUBCKT ECL81P  1 2 3 4 ; A G2 G1 C (Pentode)
+* universal vademecum (1960)
+* library format: LTSpice 05-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=17.51 EX=1.350 KG1=590.8 KG2=350 KP=209.03 KVB=32.5 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL81P
+
+******************
+.SUBCKT ECL82T  1 2 3 ; P G C (Triode)
+* Philips Data Book 17-02-1956 AKA 6BM8
+* library format: LTSpice 04-Feb-2009
+X1 1 2 3 TRIODE MU=71.97 EX=1.480 KG1=1481.3 KP=500.37 KVB=0.7 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL82T
+
+******************
+.SUBCKT ECL82P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data Book 17-02-1956 AKA 6BM8
+* library format: LTSpice 04-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=12.19 EX=1.350 KG1=522.0 KG2=320 KP=38.60 KVB=25.8 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL82P
+
+******************
+.SUBCKT ECL83T  1 2 3 ; P G C (Triode)
+* universal vademecum (1960)
+* library format: LTSpice 04-Feb-2009
+X1 1 2 3 TRIODE MU=119.15 EX=1.321 KG1=732.5 KP=305.21 KVB=1.8 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL83T
+
+******************
+.SUBCKT ECL83P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Mullard Data Book 1960
+* library format: LTSpice 04-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=10.96 EX=1.350 KG1=1249.7 KG2=730 KP=54.82 KVB=14.5 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL83P
+
+******************
+.SUBCKT ECL84T  1 2 3 ; P G C (Triode)
+* Philips Data Book sept 1968 AKA 6DX8
+* library format: LTSpice 03-Feb-2009
+X1 1 2 3 TRIODE MU=87.85 EX=1.507 KG1=473.2 KP=343.45 KVB=300.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL84T
+
+******************
+.SUBCKT ECL84P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data Book sept 1968 AKA 6DX8
+* library format: LTSpice 04-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=43.66 EX=1.350 KG1=344.3 KG2=215 KP=201.06 KVB=26.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL84P
+
+******************
+.SUBCKT ECL85T  1 2 3 ; P G C (Triode)
+* Philips Data Book Jan 1960 AKA 6GV8
+* library format: LTSpice 03-Feb-2009
+X1 1 2 3 TRIODE MU=56.54 EX=1.608 KG1=719.6 KP=247.12 KVB=3.0 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL85T
+
+******************
+.SUBCKT ECL85P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data Book Jan 1960 AKA 6GV8
+* library format: LTSpice 03-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=9.35 EX=1.350 KG1=556.4 KG2=330 KP=35.28 KVB=21.3 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL85P
+
+******************
+.SUBCKT ECL86T  1 2 3 ; P G C (Triode)
+* Philips Data Book Jan 1970 AKA 6GW8
+* library format: LTSpice 03-Feb-2009
+X1 1 2 3 TRIODE MU=102.92 EX=1.425 KG1=1754.6 KP=1098.83 KVB=0.5 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=2.7p CCP=1.8p ;
+.ENDS    ECL86T
+
+******************
+.SUBCKT ECL86P  1 2 3 4 ; A G2 G1 C (Pentode)
+* Philips Data Book Jan 1970 AKA 6GW8
+* library format: LTSpice 03-Feb-2009
+X1 1 2 3 4 PENTODE1 MU=23.15 EX=1.350 KG1=479.1 KG2=290 KP=128.94 KVB=36.0 VCT=0.00 ALPHA=.02m BETA=.1U CCG=6.7p CPG1=0.6p CCP=4.1p ;
+.ENDS    ECL86P
+
+******************
+.SUBCKT ECL802T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL85
+X1 1 2 3 ECL85T ; same as ECL85T
+.ENDS    ECL802T
+
+******************
+.SUBCKT ECL802P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL85
+X1 1 2 3 4 ECL85P ; same as ECL85P
+.ENDS	ECL802P
+
+******************
+.SUBCKT ECL805T  1 2 3 ; P G C (Triode)  ; TRIODE SECTION
+* Call Equiverlent AKA ECL85
+X1 1 2 3 ECL85T ; same as ECL85T
+.ENDS    ECL805T
+
+******************
+.SUBCKT ECL805P 1 2 3 4 ; A G2 G1 C (Pentode)	; PENTODE SECTION
+* Call Equiverlent AKA ECL85
+X1 1 2 3 4 ECL85P ; same as ECL85P
+.ENDS	ECL805P
+
+************************
+* Hexodes and Heptodes *
+************************
+
+******************
+.SUBCKT 6AN7T  1 2 3 ; P G C (Triode)
+* Philips Data sheet AKA ECH42T
+* library format: LTSpice 01-Oct-2025
+X1 1 2 3 ECH80T ;
+.ENDS    6AN7T
+
+******************
+.SUBCKT 6AN7H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* MAZDA data sheet AKA ECH80H
+* library format: LTSpice 30-Sep-2025
+X1 1 2 3 4 5 ECH81H ;
+.ENDS    6AN7H
+
+******************
+.SUBCKT 6AJ8T  ; P G C (Triode)
+* same as ECH81T
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3  ECH81T ;
+.ENDS    6AJ8T
+
+******************
+.SUBCKT 6AJ8H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* MAZDA data sheet AKA ECH81H
+* library format: LTSpice 30-Sep-2025
+X1 1 2 3 4 5 ECH81H ;
+.ENDS    6AJ8H
+
+******************
+.SUBCKT 6CS6 1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Heptode)
+* same as EH90
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 5 EH90 ;
+.ENDS    6CS6
+
+******************
+.SUBCKT 6V9T  1 2 3 ; P G C (Triode)
+* Same as ECH200
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 ECH200T
+.ENDS    6V9T
+
+******************
+.SUBCKT 6V9H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Heptode)
+* Same as ECH200
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 5 ECH200H ;
+.ENDS    6V9H
+
+******************
+.SUBCKT 6JX8T  1 2 3 ; P G C (Triode)
+* Philips Data sheet
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 ECH84T
+.ENDS    6JX8T
+
+******************
+.SUBCKT 6JX8H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* Philips Data sheet
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 5 EH900S ;
+.ENDS    6JX8H
+
+******************
+.SUBCKT 5915  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+*  AKA E91H EH900 EH960
+* library format: LTSpice 28-Nov-2013
+X1 1 2 3 4 5 EH900S ;
+.ENDS    5915
+
+******************
+.SUBCKT 6687  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+*  AKA 5915 EH900S EH960
+* library format: LTSpice 28-Nov-2013
+X1 1 2 3 4 5 E91H ;
+.ENDS    6687
+
+******************
+.SUBCKT ECH200T  1 2 3 ; P G C (Triode)
+* Mazda Data sheet
+* library format: LTSpice 21-Aug-2014
+X1 1 2 3 TRIODE MU=65.08 EX=1.261 KG1=246.2 KP=197.61 KVB=603.0 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=3.5p CCP=3.1p ;
+.ENDS    ECH200T
+
+******************
+.SUBCKT ECH200H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Heptode)
+* Philips Data Sheet
+* library format: LTSpice 28-Nov-2013
+X1 1 2 3 4 5 HEXODE MU=16.34 EX=1.350 KG1=1650 KG2=570 KP=84.14 KVB=7.1 VCT=0.00 ALPHA=.02m BETA=.1U CCG1=5.2p CCG2=6.8p CPG1=0.07p CPG2=0.35p CCP=8.3p ;
+.ENDS    ECH200H
+
+******************
+.SUBCKT ECH42T  1 2 3 ; P G C (Triode)
+* Philips Data sheet AKA ECH82T
+* library format: LTSpice 01-Oct-2025
+X1 1 2 3 ECH80T ;
+.ENDS    ECH42T
+
+******************
+.SUBCKT ECH42H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* MAZDA data sheet AKA 6AJ8H
+* library format: LTSpice 30-Sep-2025
+X1 1 2 3 4 5 ECH80H ;
+.ENDS    ECH42H
+
+******************
+.SUBCKT ECH80T  1 2 3 ; P G C (Triode)
+* Philips Data sheet AKA ECH42T
+* library format: LTSpice 01-Oct-2025
+X1 1 2 3 TRIODE MU=37.56 EX=1.412 KG1=1237.3 KP=46.55 KVB=4.7 VCT=0.50 ALPHA=.02m BETA=.1U CCG=5.9p CGP=1.3p CCP=2.4p ;
+.ENDS    ECH80T
+
+******************
+.SUBCKT ECH80H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* MAZDA data sheet AKA 6AJ8H
+* library format: LTSpice 30-Sep-2025
+X1 1 2 3 4 5 ECH81H ;
+.ENDS    ECH80H
+
+******************
+.SUBCKT ECH81T  1 2 3 ; P G C (Triode)
+* MAZDA Data sheet AKA 6AJ8
+* library format: LTSpice 30-Sep-2025
+X1 1 2 3 TRIODE MU=20.63 EX=1.445 KG1=1699.9 KP=60.85 KVB=942.1 VCT=0.50 ALPHA=.02m BETA=.1U CCG=2.6p CGP=1.0p CCP=2.1p ;
+.ENDS    ECH81T
+
+******************
+.SUBCKT ECH81H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* MAZDA data sheet AKA 6AJ8H
+* library format: LTSpice 30-Sep-2025
+X1 1 2 3 4 5 HEXODE MU=14.18 EX=1.350 KG1=5880.0 KG2=1528 KP=469.37 KVB=41.1 VCT=0.00 ALPHA=.02m BETA=.1U CCG1=5.2p CCG2=6.8p CPG1=0.07p CPG2=0.35p CCP=8.3p ;
+.ENDS    ECH81H
+
+******************
+.SUBCKT ECH84T  1 2 3 ; P G C (Triode)
+* Philips Data sheet
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 TRIODE MU=45.09 EX=1.498 KG1=1312.9 KP=203.51 KVB=0.0 VCT=0.50 ALPHA=.02m BETA=.1U CCG=3.2p CGP=3.5p CCP=3.1p ;
+.ENDS    ECH84T
+
+******************
+.SUBCKT ECH84H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* Philips Data sheet
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 5 HEXODE MU=16.34 EX=1.350 KG1=3256.2 KG2=950 KP=84.14 KVB=7.1 VCT=0.00 ALPHA=.02m BETA=.1U CCG1=5.2p CCG2=6.8p CPG1=0.07p CPG2=0.35p CCP=8.3p ;
+.ENDS    ECH84H
+
+******************
+.SUBCKT EH90  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* Philips data sheet AKA 6CS6
+* library format: LTSpice 28-Nov-2013
+X1 1 2 3 4 5 HEXODE MU=22.32 EX=1.350 KG1=2196.7 KG2=550 KP=48.74 KVB=1.9 VCT=0.00 ALPHA=.02m BETA=.1U CCG1=5.2p CCG2=6.8p CPG1=0.07p CPG2=0.35p CCP=8.3p ;
+.ENDS    EH90
+
+******************
+.SUBCKT E91H  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+*  AKA 5915 EH900S EH960
+* library format: LTSpice 28-Nov-2013
+X1 1 2 3 4 5 EH900S ;
+.ENDS    E91H
+
+******************
+.SUBCKT EH860  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+*  same as EH90
+* library format: LTSpice 19-Aug-2025
+X1 1 2 3 4 5 EH90 ;
+.ENDS    EH960
+
+******************
+.SUBCKT EH900S  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+* TELEFUNKEN data sheet AKA 5915 E91H EH960
+* library format: LTSpice 02-Oct-2025
+X1 1 2 3 4 5 HEXODE MU=17.30 EX=1.350 KG1=2406.2 KG2=950 KP=81.74 KVB=12.8 VCT=0.00 ALPHA=.02m BETA=.1U CCG1=5.2p CCG2=6.8p CPG1=0.07p CPG2=0.35p CCP=8.3p ;
+.ENDS    EH900S
+
+******************
+.SUBCKT EH960  1 2 3 4 5 ; Anode Screen Control1 Cathode Control2 (Hexode)
+*  AKA 5915 E91H EH900S EH960
+* library format: LTSpice 28-Nov-2013
+X1 1 2 3 4 5 EH900S ;
+.ENDS    EH960
+
+***************************
+**Voltage Regulator Tubes**
+***************************
+
+******************
+.SUBCKT OA2  1 2 ; A C (150 volt 5-30ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=185 Vhold=150 Zon=150 Ihold=2.5m Tau=100u
+.ENDS    OA2
+
+******************
+.SUBCKT OA3  1 2 ; A C (75 volt 5-40ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=105 Vhold=75 Zon=125 Ihold=2.5m Tau=100u
+.ENDS    OA3
+
+******************
+.SUBCKT OB2  1 2 ; A C (108 volt 5-30 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=127 Vhold=108 Zon=120 Ihold=2.5m Tau=100u
+.ENDS    OB2
+
+******************
+.SUBCKT OB3  1 2 ; A C (90 volt 5-30 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=130 Vhold=90 Zon=166 Ihold=2.5m Tau=100u
+.ENDS    OB2
+
+******************
+.SUBCKT OC2  1 2 ; A C (72 volt 5-30 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=115 Vhold=75 Zon=120 Ihold=2.5m Tau=100u
+.ENDS    OC2
+
+******************
+.SUBCKT OC3  1 2 ; A C (105 volt 5-40 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=133 Vhold=105 Zon=120 Ihold=2.5m Tau=100u
+.ENDS    OC3
+
+******************
+.SUBCKT OD3  1 2 ; A C (150 volt 5-40 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=185 Vhold=150 Zon=100 Ihold=2.5m Tau=100u
+.ENDS    OD3
+
+******************
+.SUBCKT 85A2  1 2 ; A C (85 volt 1-10 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=125 Vhold=85 Zon=400 Ihold=2.5m Tau=100u
+.ENDS    85A2
+
+******************
+.SUBCKT 5651  1 2 ; A C (87 volt 1.5-3.5 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=115 Vhold=87 Zon=860 Ihold=2.5m Tau=100u
+.ENDS    5651
+
+******************
+.SUBCKT 5651A  1 2 ; A C (85.5 volt 1.5-3.5 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=115 Vhold=85.5 Zon=860 Ihold=2.5m Tau=100u
+.ENDS    5651A
+
+******************
+.SUBCKT 5783 1 2 ; A C (85 volt 1.5-3.5 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=115 Vhold=85 Zon=860 Ihold=2.5m Tau=100u
+.ENDS    5783
+
+******************
+.SUBCKT STV70/6  1 2 ; A C (77 volt 2.5-6 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=100 Vhold=77 Zon=580 Ihold=2.5m Tau=100u
+.ENDS    STV70/6
+
+******************
+.SUBCKT STV85/10  1 2 ; A C (77 volt 2.5-6 ma vrtube)
+* Universal Electronic VadeMecum  15-May-2020
+x1 1 2 VRTUBE Vstrike=115 Vhold=77 Zon=580 Ihold=2.5m Tau=100u
+.ENDS    STV70/6
+
+*******************************************************************************
+* MATHAMATICAL MODELS                                                         *
+* With thanks to Norman Koren, Charles Rydel, Marshal Leach, Stefano Perugini *
+* Scott Rydel, Mike Holmes, LTspice and sage advice from Derk Reefman et al   *
+*******************************************************************************
+*
+*
+******************
+* Copyright © Linear Technology Corp. 1998, 1999, 2000, 2001, 2002, 2003.  All rights reserved.
+* Used for voltage regulators based on gas tubes and neons
+*
+.subckt VRTUBE 1 2
+S1 1 2 2 N001 G
+S2 2 1 N001 2 G
+R1 1 N001 100Meg
+C1 N001 2 {Tau/100Meg}
+.model G SW(Ron={Zon} Roff=1T Vt={.5*(Vstrike+Vhold)} Vh={.5*(Vstrike-Vhold)} Vser={Vhold-Ihold*Zon})
+.ends VRTUBE
+
+******************
+* (Diode - Stefano Perugini's Second improvement)
+* Ip= (Ka+Kb*Vplate)*POW((Vplate+EPS),EX)
+*             anode
+*             | cathode
+*             | |
+.SUBCKT RECP2 1 2
+RE	7	0	1MEG    ; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+E1	7	0	VALUE=({Ka}+{Kb}*V(1,2))* POW(V(1,2)+{EPS},{EX})
+G1	1	2	VALUE=if(V(1,2)+{EPS}>0, V(7), 0)
+R1	1	2	1T
+.ENDS	RECP2
+
+******************
+* (Diode - Stefano Perugini's Second improvement)
+* Ip = (Ka+Kb*Vplate)*POW((Vplate+EPS),EX)
+*                 anode 1
+*                 | anode 2
+*                 | | cathode
+*                 | | |
+.SUBCKT DULERECP2 1 2 3
+X1	1	3	RECP2 ;
+X2	2	3	RECP2 ;
+.ENDS DULERECP2
+
+******************
+.SUBCKT TRIODE 1 2 3 ; A G C
+* Norman Koren's original Triode formula
+E1  7 0 VALUE={V(1,3)/KP*LOG(1+EXP(KP*(1/MU+(V(2,3)+VCT)/SQRT(KVB+V(1,3)*V(1,3)))))}
+Ga  1 3 VALUE={(PWR(V(7,0),EX)+PWRS(V(7,0),EX))/KG1}							; Anode Current
+* Taken from Rydel's Pentode model
+Gg1		2   3	VALUE={IF(V(2,3)>0,ALPHA*PWR(V(2,3),1.5),BETA/-(V(2,3)-.1))}	; Control Grid is a thermionic diode FFS
+* inter electrode capacitence
+C1		2	3	{CCG}															; CATHODE-GRID
+C2		2	1	{CGP}															; GRID=PLATE
+C3		1	3	{CCP}															; CATHODE-PLATE
+* Dummy resistors so nodes have 2 connections
+RE1		7	0	1G																; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+RCP		1	3	1G      														; FOR CONVERGENCE             A  - C
+RF2		2	3	50MEG
+.ENDS	TRIODE
+*
+******************
+* Pentodes with Supressor Grid control
+* I do not know what possessed LTspice to do the Pentode symbol this way. Consistency what is that? But It is what it is.
+.SUBCKT PENTODE 1 2 3 4 5 ; C G1 G2 G3 A
+* Norman Koren's original formula
+E1		7	0	VALUE={V(3,1)/KP*LOG(1+EXP((1/MU+(V(2,1))/V(3,1))*KP))}			; E1 BREAKS UP LONG EQUATION FOR Ga and Gc.
+E2		8	0	VALUE={(PWR(V(7),EX)+PWRS(V(7),EX))}							; E2 saves Calculation twice for Ga and Gc.
+* Mike Holms Suppressor grid formula - modified to accomidate Space charge mods
+E3b   dar   0   VALUE={if( V(4,1)>0, 1+V(4,1)*0.13, 1/((1+abs(V(4,1))*0.1)**1.5))}	; delta ar
+*               ^ if Vg3 to k > 0, use the first calc., else use the second.
+* The above are merely ratios by which the final anode and screen currents are multiplied to either increase or decrease by 1+ some fraction, as appropriate.
+E3a     9   0   VALUE={IF( V(dar) >1.1, 1.1, V(dar))}							; approximate to a scurve
+*
+* For the modified Koren model we do not need to effect the screen current because of the way that screen current is calculated Cathode Current - Anode current
+*
+* Norman Koren original formula V1 Modified with Mike Holms G3 Mod
+Ga		5	3	VALUE={(V(8)*(1/KG1)*(ATAN(V(5,1)/KVB)))*V(9)}					; Anode Current
+* A nod to Marshall Leach's ideas and Space Charge
+Gc		3	1	VALUE={(V(8)/KG2)}												; Cathode Current
+* Taken from Rydel's Tube models
+Gg1		2   1	VALUE={IF(V(2,1)>0,ALPHA*PWR(V(2,1),1.5),BETA/-(V(2,1)-.1))}	; Control Grid is a thermionic diode FFS
+Gg3		4   1	VALUE={IF(V(4,1)>0,ALPHA*PWR(V(4,1),1.5),BETA/-(V(4,1)-.1))}	; Suppressor Grid is a thermionic diode FFS
+* inter electrode capacitance
+C1		1	2	{CCG}   														; CATHODE-GRID 1              C  - G1
+C2		2	5	{CPG1}															; GRID 1-PLATE                G1 - A
+C3		1	5	{CCP}   														; CATHODE-PLATE               A  - C
+C4		1	4	{CCG3}   														; CATHODE-GRID 3              C  - G3   														; CATHODE-GRID 1              C  - G1
+C5		4	5	{CPG3}															; GRID 3-PLATE                G3 - A
+* Dummy resistors so nodes have 2 connections
+RE1		7	0	1G																; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+RE2		8	0	1G																; DUMMY SO NODE 8 HAS 2 CONNECTIONS
+RE3		9	0	1G																; DUMMY SO NODE 9 HAS 2 CONNECTIONS
+RCP		1	4	1G      														; FOR CONVERGENCE             A  - C
+RF1		1	2	50MEG															; Control Grid leak
+RF2		1	4	50MEG															; Suppressor Grid leak
+.ENDS PENTODE
+*
+******************
+.SUBCKT PENTODE1 1 2 3 4 ; A G2 G1 C
+* Norman Koren's original formula
+E1		7	0	VALUE={V(2,4)/KP*LOG(1+EXP((1/MU+V(3,4)/V(2,4))*KP))}			; E1 BREAKS UP LONG EQUATION FOR Ga and Gc.
+E2		8	0	VALUE={(PWR(V(7),EX)+PWRS(V(7),EX))}							; E2 saves Calculation twice for Ga and Gc.
+* Norman Koren original formula V1
+Ga		1	2	VALUE={V(8)/KG1*ATAN(V(1,4)/KVB)}								; Anode Current
+* A nod to Marshall Leach's ideas about Space Charge
+Gc		2	4	VALUE={V(8)/KG2}												; Cathode Current
+* Taken from Rydel's Pentode model
+Gg1		3   4	VALUE={IF(V(3,4)>0,ALPHA*PWR(V(3,4),1.5),BETA/-(V(3,4)-.1))}	; Control Grid is a thermionic diode FFS
+* inter electrode capacitence
+C1		3	4	{CCG}   														; CATHODE-GRID 1              C  - G1
+C2		1	3	{CPG1}															; GRID 1-PLATE                G1 - A
+C3		1	4	{CCP}   														; CATHODE-PLATE               A  - C
+* Dummy resistors so nodes have 2 connections
+RE1		7	0	1G																; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+RE2		8	0	1G																; DUMMY SO NODE 8 HAS 2 CONNECTIONS
+RCP		1	4	1G      														; FOR CONVERGENCE             A  - C
+RF2		3	4	50MEG
+.ENDS PENTODE1
+*
+******************
+.SUBCKT PENTODE2 1 2 3 4 ; A G2 G1 C
+* Norman Koren's original formula
+E1		7	0	VALUE={V(2,4)/KP*LOG(1+EXP((1/MU+V(3,4)/V(2,4))*KP))}			; E1 BREAKS UP LONG EQUATION FOR Ga and Gc.
+E2		8	0	VALUE={(PWR(V(7),EX)+PWRS(V(7),EX))}							; E2 saves Calculation twice for Ga and Gc.
+* Norman Koren original formula V2
+Ga		1	2	VALUE={pi/2*V(8)/KG1*(1-exp(-2*V(1,4)/(pi*KVB)))}				; Anode Current
+* A nod to Marshall Leach's ideas about Space Charge
+Gc		2	4	VALUE={V(8)/KG2}												; Cathode Current
+* Taken from Rydel's Pentode model
+Gg1		3   4	VALUE={IF(V(3,4)>0,ALPHA*PWR(V(3,4),1.5),BETA/-(V(3,4)-.1))}	; Control Grid is a thermionic diode FFS
+* inter electrode capacitence
+C1		3	4	{CCG}   														; CATHODE-GRID 1              C  - G1
+C2		1	3	{CPG1}															; GRID 1-PLATE                G1 - A
+C3		1	4	{CCP}   														; CATHODE-PLATE               A  - C
+* Dummy resistors so nodes have 2 connections
+RE1		7	0	1G																; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+RE2		8	0	1G																; DUMMY SO NODE 8 HAS 2 CONNECTIONS
+RCP		1	4	1G      														; FOR CONVERGENCE             A  - C
+RF2		3	4	50MEG
+.ENDS PENTODE2
+*
+******************
+.SUBCKT PENTODE3 1 2 3 4 ; A G2 G1 C
+* Norman Koren's original formula
+E1		7	0	VALUE={V(2,4)/KP*LOG(1+EXP((1/MU+V(3,4)/V(2,4))*KP))}			; E1 BREAKS UP LONG EQUATION FOR Ga and Gc.
+E2		8	0	VALUE={(PWR(V(7),EX)+PWRS(V(7),EX))}							; E2 saves Calculation twice for Ga and Gc.
+* Norman Koren original Anode formula V3
+Ga		1	2	VALUE={pi/2*V(8)/KG1*tanh(2*V(1,4)/(pi*KVB))}					; Anode Current
+* A nod to Marshall Leach's ideas about Space Charge
+Gc		2	4	VALUE={V(8)/KG2}												; Cathode Current
+* Taken from Rydel's Pentode model
+Gg1		3   4	VALUE={IF(V(3,4)>0,ALPHA*PWR(V(3,4),1.5),BETA/-(V(3,4)-.1))}	; Control Grid is a thermionic diode FFS
+* inter electrode capacitence
+C1		3	4	{CCG}   														; CATHODE-GRID 1              C  - G1
+C2		1	3	{CPG1}															; GRID 1-PLATE                G1 - A
+C3		1	4	{CCP}   														; CATHODE-PLATE               A  - C
+* Dummy resistors so nodes have 2 connections
+RE1		7	0	1G																; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+RE2		8	0	1G																; DUMMY SO NODE 8 HAS 2 CONNECTIONS
+RCP		1	4	1G      														; FOR CONVERGENCE             A  - C
+RF2		3	4	50MEG
+.ENDS PENTODE3
+*
+******************
+.SUBCKT HEXODE  1 2 3 4 5 ; A G4+G2 G1 C G3
+* Norman Koren's original formula
+* modified by Suusi M-B to allow a second control grid
+E1		7	0	VALUE={V(2,4)/KP*LOG(1+EXP((1/MU+(V(3,4)+V(5,4))/V(2,4))*KP))}	; E1 BREAKS UP LONG EQUATION FOR Ga and Gc.
+E2		8	0	VALUE={(PWR(V(7),EX)+PWRS(V(7),EX))}							; E2 saves Calculation twice for Ga and Gc.
+Ga		1	2	VALUE={V(8)/KG1*ATAN(V(1,4)/KVB)}								; Anode Current
+* A nod to Marshall Leach's ideas about Space Charge
+Gc		2	4	VALUE={V(8)/KG2}												; Cathode Current
+* Taken from Rydel's Pentode model
+Gg1		3   4	VALUE={IF(V(3,4)>0,ALPHA*PWR(V(3,4),1.5),BETA/-(V(3,4)-.1))}	; Control Grid1 is a thermionic diode FFS
+Gg3		5   4	VALUE={IF(V(5,4)>0,ALPHA*PWR(V(5,4),1.5),BETA/-(V(5,4)-.1))}	; Control Grid3 is a thermionic diode FFS
+* inter electrode capacitence
+C1		3	4	{CCG1}															; CATHODE-GRID 1              C  - G1
+C2		5	4	{CCG2}															; CATHODE-GRID 2              C  - G3
+C3		1	3	{CPG1}															; GRID 1-PLATE                G1 - A
+C4		1	5	{CPG2}															; GRID 2-PLATE                G3 - A
+C5		1	4	{CCP}															; CATHODE-PLATE               A  - C
+* Dummy resistors so nodes have 2 connections
+RE1		7	0	1G																; DUMMY SO NODE 7 HAS 2 CONNECTIONS
+RE2		8	0	1G																; DUMMY SO NODE 8 HAS 2 CONNECTIONS
+RCP		1	4	1G      														; FOR CONVERGENCE             A  - C
+RF2		3	4	50MEG
+.ENDS HEXODE
