@@ -14,9 +14,9 @@ Somewhere along the way I reasoned that I could adapt the Koren Pentode model to
 
 Anyroads this all ruminated in my head for a decade until June 2025 when I pulled my finger out and got on with it. I ripped apart the Koren Pentode model to properly understand how it works and then adapt it work with the Space charge concept that Marshall Leach had introduced. Once done I then intergrated the control grid as a thermionic diode as per Charles Rydels models.
 
-All Diodes are modled using Stefano Perugini's second improvement on the classic Diode model.
+All Diodes are modeled using Stefano Perugini's second improvement on the classic Diode model.
 
-All voltage regulators are modled by the use and abuse of Analog Spicemans neon model.
+All voltage regulators are modeled by the use and abuse of Analog Spicemans neon model.
 
 I find myself walking in the shadows of giants…
 
@@ -26,5 +26,5 @@ PLEASE NOTE: SuusiTubes_V1.net is for LTspice only. I have tested it as much as 
 Version History
 SuusiTubes_RC1.net	2025/10/08
 SuusiTubes_RC2.net	2025/01/04
-SuusiTubes_RC3.net	2025/06/15
-SuusiTubes_V1.net	2026/07/23
+SuusiTubes_RC3.net	2026/06/15
+SuusiTubes_V1.net	  2026/07/23
