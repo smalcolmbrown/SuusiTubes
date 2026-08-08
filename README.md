@@ -22,6 +22,8 @@ I find myself walking in the shadows of giants…
 
 Hybridisation by Suusi Malcolm-Brown June 2025 - July 2026
 
+Copyright © Suusi Malcolm-Brown July 2025 to the present
+
 PLEASE NOTE: SuusiTubes_V1.net is for LTspice only. I have tested it as much as I can. No doubt someone will find an error.  If you do please tell me about it so that I can fix it.
 Version History
 SuusiTubes_RC1.net	2025/10/08
